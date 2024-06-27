@@ -8,6 +8,16 @@ function Navbar() {
             <div className='logo-container'>
                 <img src={logo} className='logo'/>
             </div>
+            <div className='navbar-container'>
+                <div className='pages-container'>
+                    <div className='page'>Home</div>
+                    <div className='page'>Projects</div>
+                    <div className='page'>Contact</div>
+                </div>
+                <div className='search-bar'>
+                    <p>Search...</p>
+                </div>
+            </div>
         </div>
     );
 }
