@@ -5,7 +5,12 @@ function HeroBanner() {
     return (
         <div className={styles.container}>
             <div className={styles.welcomeContainer}>
-                Hi!
+                <span className={styles.welcomeText}>What's Up? I'm</span>
+                <div className={styles.nameContainer}>
+                    <div className={styles.firstName}>Angelo</div>
+                    <div className={styles.lastName}><span>Alva</span>rez</div>
+                </div>
+                <span className={styles.position}>Junior Developer</span>
             </div>
         </div>
     );

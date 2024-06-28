@@ -1,17 +1,53 @@
 .container {
     display: flex;
-    margin: 0 8vw 0 8vw;
     padding-top: 2vh;
     flex-grow: 1;
+    align-items: center;
 }
 
 .welcomeContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: red;
     height: 50vh;
     width: 27.1vw;
-    margin-left: auto;
-    margin-right: 42vw;
+    margin-left: 7vw;
+    margin-bottom: 10vh;
+    align-items: end;
+    justify-content: center;
+}
+
+.welcomeText {
+    font-family: var(--text-font);
+    color: white;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.position {
+    font-family: var(--text-font);
+    color: white;
+    font-weight: 600;
+    font-size: 1.75em;
+}
+
+.nameContainer {
+    color: var(--yellow);
+    font-family: var(--design-font);
+    font-size: 5em;
+    line-height: 0.9em;
+    text-align: right;
+    font-weight: 700;
+    padding: 0.25em 0 0.5em 0;
+    font-style: italic;
+}
+
+.lastName span {
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-color: var(--yellow);
+    -webkit-text-stroke-width: 4px;
+}
+
+.lastName {
+    font-style: normal;
+    font-size: 1.3em;
 }

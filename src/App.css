@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --bg-gray: #191919;
   --text-font: 'Geologica', sans-serif;
+  --design-font: 'Noto Serif Display', serif;
   --light-gray: #343435;
+  --yellow: #FFD540;
 }
 
 .App {
