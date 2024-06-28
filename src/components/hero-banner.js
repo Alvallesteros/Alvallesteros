@@ -1,9 +1,9 @@
 import React from 'react';
-import '../hero-banner.css';
+import styles from '../styles/hero-banner.module.css';
 
 function HeroBanner() {
     return (
-        <div id='hero-banner'>
+        <div>
             
         </div>
     );
