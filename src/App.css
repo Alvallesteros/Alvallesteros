@@ -7,6 +7,12 @@
   --design-font: 'Noto Serif Display', serif;
   --light-gray: #343435;
   --yellow: #FFD540;
+  --dark-gray: #1E1F21;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .App {
