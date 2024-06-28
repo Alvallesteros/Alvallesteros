@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from '../styles/skills.module.css';
 import common from '../styles/common.module.css';
-import github from '../imgs/github.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPython, faJava, faWindows, faGitAlt, faJs, faHtml5 } from "@fortawesome/free-brands-svg-icons"
 
 function Skills() {
     return (
@@ -16,39 +17,39 @@ function Skills() {
             <div className={styles.skillsContainer}>
                 <div className={styles.skills}>
                     <div className={styles.imgContainer}>
-                        <img src={github} className={styles.img}/>
+                        <FontAwesomeIcon icon={faPython} className={styles.img}/>
                     </div>
-                    <span>Github</span>
+                    <span>Python</span>
                 </div>
                 <div className={styles.skills}>
                     <div className={styles.imgContainer}>
-                        <img src={github} className={styles.img}/>
+                        <FontAwesomeIcon icon={faJava} className={styles.img}/>
                     </div>
-                    <span>Github</span>
+                    <span>Java</span>
                 </div>
-                <div className={styles.skills} style={{flexBasis: "27vw"}}>
+                <div className={styles.skills}>
                     <div className={styles.imgContainer}>
-                        <img src={github} className={styles.img}/>
+                        <FontAwesomeIcon icon={faWindows} className={styles.img}/>
+                    </div>
+                    <span>Azure</span>
+                </div>
+                <div className={styles.skills} style={{flexBasis: "20vw"}}>
+                    <div className={styles.imgContainer}>
+                        <FontAwesomeIcon icon={faGitAlt} className={styles.img}/>
                     </div>
                     <span>Git Source Control</span>
                 </div>
-                <div className={styles.skills}>
+                <div className={styles.skills} style={{flexBasis: "20vw"}}>
                     <div className={styles.imgContainer}>
-                        <img src={github} className={styles.img}/>
+                        <FontAwesomeIcon icon={faJs} className={styles.img}/>
                     </div>
-                    <span>Github</span>
+                    <span>JavaScript</span>
                 </div>
-                <div className={styles.skills}>
+                <div className={styles.skills} style={{flexBasis: "20vw"}}>
                     <div className={styles.imgContainer}>
-                        <img src={github} className={styles.img}/>
+                        <FontAwesomeIcon icon={faHtml5} className={styles.img}/>
                     </div>
-                    <span>Github</span>
-                </div>
-                <div className={styles.skills}>
-                    <div className={styles.imgContainer}>
-                        <img src={github} className={styles.img}/>
-                    </div>
-                    <span>Github</span>
+                    <span>HTML / CSS</span>
                 </div>
             </div>
             <div className={common.lefthandContainer}>

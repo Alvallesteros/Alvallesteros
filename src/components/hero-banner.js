@@ -1,8 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons"
 import styles from '../styles/hero-banner.module.css';
-import linkedin from '../imgs/linked-in.svg';
-import telegram from '../imgs/telegram.svg';
-import github from '../imgs/github.svg';
 
 function HeroBanner() {
     return (
@@ -20,9 +19,9 @@ function HeroBanner() {
                 <div className={styles.lefthandContainer}>
                     <div className={styles.line}></div>
                     <div className={styles.socialsContainer}>
-                        <img src={linkedin} className={styles.socials}/>
-                        <img src={github} className={styles.socials}/>
-                        <img src={telegram} className={styles.socials}/>
+                        <FontAwesomeIcon icon={faLinkedin} className={styles.socials}/>
+                        <FontAwesomeIcon icon={faGithub} className={styles.socials}/>
+                        <FontAwesomeIcon icon={faTelegram} className={styles.socials}/>
                     </div>
                     <div className={styles.line}></div>
                 </div>

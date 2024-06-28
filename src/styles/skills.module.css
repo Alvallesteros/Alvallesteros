@@ -37,8 +37,9 @@
 }
 
 .img {
-    max-height: 50%;
-    color: white;
+    height: 50%;
+    margin: 1.5vh 0 1.5vh 0;
+    color: var(--yellow);
 }
 
 .skills span {
