@@ -51,6 +51,9 @@ function Skills() {
                     <span>Github</span>
                 </div>
             </div>
+            <div className={common.lefthandContainer}>
+                <div className={common.line}></div>
+            </div>
         </div>
     );
 }

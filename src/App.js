@@ -5,6 +5,7 @@ import HeroBanner from './components/hero-banner.js';
 import Grid from './components/gridOverlay.js';
 import AboutMe from './components/about-me.js';
 import Skills from './components/skills.js';
+import Experiences from './components/experiences.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <HeroBanner />
         <AboutMe />
         <Skills />
+        <Experiences />
       </div>
     </div>
   );

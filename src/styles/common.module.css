@@ -11,3 +11,20 @@
     -webkit-text-stroke-color: var(--yellow);
     -webkit-text-stroke-width: 3px;
 }
+
+.line {
+    border-left: 4px solid var(--yellow);
+    flex-grow: 1;
+}
+
+.lefthandContainer {
+    width: 6vw;
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+}
