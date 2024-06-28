@@ -1,5 +1,5 @@
 .container {
-    opacity: 0.25;
+    opacity: 0;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -12,19 +12,18 @@
 
 .margin {
     height: 100vh;
-    flex-grow: 1;
-    flex-basis: 5%;
+    width: 8vw;
+    background-color: green;
 }
 
 .column {
     background-color: red;
     height: 100vh;
-    flex-grow: 1;
-    flex-basis: 4%
+    width: 6vw;
 }
 
 .gutter {
     background-color: blue;
     height: 100vh;
-    flex-grow: 1;
+    width: 1.09vw;
 }

@@ -2,11 +2,11 @@
     width: 100%;
     height: 7vh;
     display: flex;
-    margin: 1em 3% 0 3%;
+    margin: 1em 8vw 0 8vw;
 }
 
  .logoContainer {
-    width: 7vw;
+    width: 6vw;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -14,11 +14,11 @@
 }
 
  .logo {
-    max-width: 50%;
+    max-height: 90%;
 }
 
  .navbarContainer {
-    width: 45%;
+    width: 50%;
     margin-left: auto;
     display: flex;
     flex-direction: row;
@@ -29,10 +29,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1.5vw;
-    width: 60%;
+    gap: 1vw;
+    width: 48%;
     color: white;
     font-size: 32px;
+    margin-left: 0.5vw;
 }
 
  .page {
@@ -49,9 +50,9 @@
     background-color: var(--light-gray);
     display: block;
     margin-left: auto;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    width: 30%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 31%;
     height: auto;
     border-radius: 0.5em;
     display: flex;
