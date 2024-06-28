@@ -4,6 +4,7 @@ import Navbar from './components/navbar.js';
 import HeroBanner from './components/hero-banner.js';
 import Grid from './components/gridOverlay.js';
 import AboutMe from './components/about-me.js';
+import Skills from './components/skills.js';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <HeroBanner />
         <AboutMe />
+        <Skills />
       </div>
     </div>
   );
