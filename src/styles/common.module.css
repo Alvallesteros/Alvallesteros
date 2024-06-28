@@ -1,0 +1,13 @@
+.titleText {
+    color: var(--yellow);
+    font-family: var(--design-font);
+    font-size: 3.75em;
+    font-weight: 700;
+    padding: 0.25em 0 0.5em 0;
+}
+
+.titleText span {
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-color: var(--yellow);
+    -webkit-text-stroke-width: 3px;
+}
