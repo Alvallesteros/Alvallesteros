@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons"
+import profpic from '../imgs/me-alt.png'
 import styles from '../styles/hero-banner.module.css';
 
 function HeroBanner() {
@@ -15,7 +16,9 @@ function HeroBanner() {
                 <span className={styles.position}>Junior Developer</span>
             </div>
             <div className={styles.profileContainer}>
-                <div className={styles.image}></div>
+                <div className={styles.image}>
+                    <img src={profpic}/>
+                </div>
                 <div className={styles.lefthandContainer}>
                     <div className={styles.line}></div>
                     <div className={styles.socialsContainer}>
