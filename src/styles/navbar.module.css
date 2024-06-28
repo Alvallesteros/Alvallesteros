@@ -1,11 +1,11 @@
-#navbar.container {
+.container {
     width: 100%;
     height: 7vh;
     display: flex;
     margin: 1em 3% 0 3%;
 }
 
-#navbar .logo-container {
+ .logoContainer {
     width: 7vw;
     height: 100%;
     justify-content: center;
@@ -13,18 +13,18 @@
     display: flex;
 }
 
-#navbar .logo {
+ .logo {
     max-width: 50%;
 }
 
-#navbar .navbar-container {
+ .navbarContainer {
     width: 45%;
     margin-left: auto;
     display: flex;
     flex-direction: row;
 }
 
-#navbar .pages-container {
+ .pagesContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,7 +35,7 @@
     font-size: 32px;
 }
 
-#navbar .page {
+ .page {
     width: 7vw;
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@
     font-weight: 100;
 }
 
-#navbar .search-bar {
+ .searchBar {
     background-color: var(--light-gray);
     display: block;
     margin-left: auto;
@@ -58,7 +58,7 @@
     align-items: center;
 }
 
-#navbar .search-bar p {
+ .searchBar p {
     margin-left: 1.25em;
     font-family: var(--text-font);
     color: #747475;

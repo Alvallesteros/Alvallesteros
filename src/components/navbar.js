@@ -1,20 +1,20 @@
 import React from 'react';
 import logo from '../imgs/logo.svg'
-import '../styles/navbar.css';
+import styles from '../styles/navbar.module.css';
 
 function Navbar() {
     return (
-        <div id='navbar' className='container'>
-            <div className='logo-container'>
-                <img src={logo} className='logo'/>
+        <div className={styles.container}>
+            <div className={styles.logoContainer}>
+                <img src={logo} className={styles.logo}/>
             </div>
-            <div className='navbar-container'>
-                <div className='pages-container'>
-                    <div className='page'>Home</div>
-                    <div className='page'>Projects</div>
-                    <div className='page'>Contact</div>
+            <div className={styles.navbarContainer}>
+                <div className={styles.pagesContainer}>
+                    <div className={styles.page}>Home</div>
+                    <div className={styles.page}>Projects</div>
+                    <div className={styles.page}>Contact</div>
                 </div>
-                <div className='search-bar'>
+                <div className={styles.searchBar}>
                     <p>Search...</p>
                 </div>
             </div>
