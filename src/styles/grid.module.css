@@ -1,5 +1,5 @@
 .container {
-    opacity: 0;
+    opacity: 0.1;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -8,12 +8,7 @@
     top: 0;
     left: 0;
     z-index: 10;
-}
-
-.margin {
-    height: 100vh;
-    width: 8vw;
-    background-color: green;
+    justify-content: center;
 }
 
 .column {
@@ -25,5 +20,5 @@
 .gutter {
     background-color: blue;
     height: 100vh;
-    width: 1.09vw;
+    width: 1vw;
 }

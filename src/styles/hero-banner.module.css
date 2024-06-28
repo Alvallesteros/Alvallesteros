@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    margin: 0 8vw 0 8vw;
+    padding-top: 2vh;
+    flex-grow: 1;
+}
+
+.welcomeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    height: 50vh;
+    width: 27.1vw;
+    margin-left: auto;
+    margin-right: 42vw;
+}

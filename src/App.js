@@ -7,9 +7,11 @@ import Grid from './components/gridOverlay.js';
 function App() {
   return (
     <div className="App">
-      <Grid />
-      <Navbar />
-      <HeroBanner />
+      <div className='web-container'>
+        <Grid />
+        <Navbar />
+        <HeroBanner />
+      </div>
     </div>
   );
 }

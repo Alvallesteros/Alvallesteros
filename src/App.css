@@ -6,8 +6,19 @@
 }
 
 .App {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   background-color: var(--bg-gray);
+}
+
+.web-container {
+  width: 83vw;
+  display: flex;
+  margin: auto;
+  margin-top: 0;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
 }
