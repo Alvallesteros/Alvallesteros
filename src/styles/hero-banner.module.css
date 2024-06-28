@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    flex-grow: 1;
+    height: 100vh;
+    align-items: center;
+}
+
+.welcomeContainer {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 27vw;
+    margin-left: 7vw;
+    align-items: end;
+    justify-content: center;
+}
+
+.welcomeText {
+    font-family: var(--text-font);
+    color: white;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.position {
+    font-family: var(--text-font);
+    color: white;
+    font-weight: 600;
+    font-size: 1.75em;
+}
+
+.nameContainer {
+    color: var(--yellow);
+    font-family: var(--design-font);
+    font-size: 5em;
+    line-height: 0.9em;
+    text-align: right;
+    font-weight: 700;
+    padding: 0.25em 0 0.5em 0;
+    font-style: italic;
+}
+
+.lastName span {
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-color: var(--yellow);
+    -webkit-text-stroke-width: 4px;
+}
+
+.lastName {
+    font-style: normal;
+    font-size: 1.3em;
+}
+
+.profileContainer {
+    width: 41vw;
+    height: 85vh;
+    margin-left: auto;
+    margin-top: auto;
+    position: relative;
+}
+
+.lefthandContainer {
+    width: 6vw;
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.line {
+    border-left: 4px solid var(--yellow);
+    flex-grow: 1;
+}
+
+.socialsContainer {
+    height: auto;
+    margin: 2vh 0 2vh 0;
+    width: 2.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.socials {
+    flex: 1 0 0;
+    margin: 1.5vh 0 1.5vh 0;
+    color: var(--yellow);
+}
+
+.image {
+    overflow: hidden;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    margin-right: 3vw;
+}
+
+.image img {
+    height: 150vh;
+    transform: scaleX(-1);
+}

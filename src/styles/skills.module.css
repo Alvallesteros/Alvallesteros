@@ -1,0 +1,50 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10vh;
+    position: relative;
+}
+
+.skillsContainer {
+    height: 55%;
+    width: 69vw;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    flex-wrap: wrap;
+}
+
+.skills {
+    height: 10vh;
+    min-width: 13vw;
+    width: 13vw;
+    background-color: var(--dark-gray);
+    border-radius: 15px/15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.imgContainer {
+    height: 100%;
+    width: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    height: 50%;
+    margin: 1.5vh 0 1.5vh 0;
+    color: var(--yellow);
+}
+
+.skills span {
+    font-family: var(--text-font);
+    color: white;
+    font-weight: 300;
+    font-size: 1.25em;
+}

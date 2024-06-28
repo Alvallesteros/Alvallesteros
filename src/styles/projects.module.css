@@ -1,0 +1,36 @@
+.container {
+    height: 40vh;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.titleContainer {
+    position: absolute;
+    margin-left: 7vw;
+    width: 34vw;
+    z-index: 2;
+}
+
+.button {
+    width: 20vw;
+    height: 8vh;
+    background-color: var(--yellow);
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    margin-right: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; 
+}
+
+.button span {
+    font-family: var(--text-font);
+    font-weight: 700;
+    color: var(--bg-gray);
+    font-size: 1.5em;
+}
