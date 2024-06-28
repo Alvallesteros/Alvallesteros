@@ -1,7 +1,11 @@
 .container {
     height: 7vh;
+    width: 83vw;
     display: flex;
     margin: 1em 0 1em 0;
+    position: absolute;
+    top: 0;
+    z-index: 5;
 }
 
  .logoContainer {
