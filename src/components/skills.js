@@ -9,7 +9,7 @@ function Skills() {
             <div className={common.titleText}
                 style={{
                     textAlign: "center",
-                    margin: "2vh 0 0 0"
+                    margin: "5vh 0 2vh 0"
                 }}>
                 <span>S</span>kills
             </div>
