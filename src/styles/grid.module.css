@@ -1,7 +1,7 @@
 .container {
-    opacity: 0;
+    opacity: 0.1;
     margin: 0;
-    height: 225vh;
+    height: 350vh;
     width: 100vw;
     display: flex;
     position: absolute;

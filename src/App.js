@@ -6,6 +6,7 @@ import Grid from './components/gridOverlay.js';
 import AboutMe from './components/about-me.js';
 import Skills from './components/skills.js';
 import Experiences from './components/experiences.js';
+import Projects from './components/projects.js';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <AboutMe />
         <Skills />
         <Experiences />
+        <Projects />
       </div>
     </div>
   );
