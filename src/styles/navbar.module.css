@@ -3,7 +3,6 @@
 }
 
 .navbarContainer {
-    position: absolute;
     top: 0;
     margin: 1rem 0 0 0 ;
     max-width: 100%;
@@ -25,4 +24,8 @@
     color: var(--yellow);
     border: 3px solid var(--light-gray);
     border-radius: 10px;
+}
+
+.burgerContainer {
+    padding-right: 0;
 }

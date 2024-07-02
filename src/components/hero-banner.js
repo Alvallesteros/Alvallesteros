@@ -3,31 +3,42 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons"
 import profpic from '../imgs/me-alt.png'
 import styles from '../styles/hero-banner.module.css';
+import common from '../styles/common.module.css';
 
 function HeroBanner() {
     return (
-        <div className={styles.container}>
-            <div className={styles.welcomeContainer}>
-                <span className={styles.welcomeText}>What's Up? I'm</span>
-                <div className={styles.nameContainer}>
-                    <div className={styles.firstName}>Angelo</div>
-                    <div className={styles.lastName}><span>Alva</span>rez</div>
-                </div>
-                <span className={styles.position}>Junior Developer</span>
-            </div>
-            <div className={styles.profileContainer}>
-                <div className={styles.image}>
-                    <img src={profpic}/>
-                </div>
-                <div className={styles.lefthandContainer}>
-                    <div className={styles.line}></div>
-                    <div className={styles.socialsContainer}>
-                        <FontAwesomeIcon icon={faLinkedin} className={styles.socials}/>
-                        <FontAwesomeIcon icon={faGithub} className={styles.socials}/>
-                        <FontAwesomeIcon icon={faTelegram} className={styles.socials}/>
+        <div className={'container ' + styles.container}>
+            <div className='row vcenter'>
+                <div className='line'></div>
+                <div className='col-s-3 vcenter'>
+                    <div className={styles.textContainer}>
+                        <span className={'header-4 ' + styles.welcome}>What's up? I'm</span>
+                        <span className={'header-1 ' + styles.fname}>Angelo</span>
+                        <span className={'header-1 ' + styles.lname}><span>Alva</span>rez</span>
+                        <span className={'header-5 ' + styles.position}>Junior Developer</span>
                     </div>
-                    <div className={styles.line}></div>
                 </div>
+            </div>
+            <div className='row'>
+                <div className='line'></div>
+                <div className='col-s-3' style={{position:'relative', height:'45vh'}}>
+                    <div className={styles.imgContainer}>
+                        <img src={profpic} />
+                    </div>
+                </div>
+            </div>
+            <div className='row vcenter'>
+                <div className='divider'></div>
+                <div className='col-s-1 real-center'>
+                    <FontAwesomeIcon icon={faLinkedin} className={styles.socials}/>
+                </div>
+                <div className='col-s-1 real-center'>
+                    <FontAwesomeIcon icon={faGithub} className={styles.socials}/>
+                </div>
+                <div className='col-s-1 real-center'>
+                    <FontAwesomeIcon icon={faTelegram} className={styles.socials}/>
+                </div>
+                <div className='divider' style={{top:'auto', bottom: '0'}}></div>
             </div>
         </div>
     );

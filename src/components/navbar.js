@@ -38,7 +38,7 @@ function Navbar() {
                         </div>
                     </div>
                 ) : (
-                    <div className='col-md-1 col-s-1 offset-md-4 offset-s-1 vcenter align-end'>
+                    <div className={'col-md-1 col-s-1 offset-md-4 offset-s-1 vcenter align-end ' + styles.burgerContainer}>
                         <FontAwesomeIcon icon={faBars} className={styles.hamburger}/>
                     </div>
                 )}
