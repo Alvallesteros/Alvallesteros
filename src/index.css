@@ -62,6 +62,12 @@ code {
   .offset-11 {margin-left: 91.66%;}
   .offset-12 {margin-left: 100%;}
   .web-container {width: 85vw;}
+  .header-1 {font-size: 6rem;}
+  .header-2 {font-size: 5rem}
+  .header-3 {font-size: 4rem;}
+  .header-4 {font-size: 3rem;}
+  .header-5 {font-size: 2.5rem;}
+  .header-6 {font-size: 2rem} 
   :root {
     --stroke: 4px
   }
@@ -84,6 +90,12 @@ code {
   .offset-l-7 {margin-left: 87.5%;}
   .offset-l-8 {margin-left: 100%;}
   .web-container {width: 85vw;}
+  .header-1 {font-size: 4rem;}
+  .header-2 {font-size: 3rem}
+  .header-3 {font-size: 2.5rem;}
+  .header-4 {font-size: 2rem;}
+  .header-5 {font-size: 1.5rem;}
+  .header-6 {font-size: 1rem}  
   :root {
     --stroke: 4px
   }
@@ -161,6 +173,7 @@ code {
 .row {
   display: flex;
   position: relative;
+  height: auto;
 }
 
 [class*="web-container"] {

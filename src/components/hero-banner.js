@@ -6,9 +6,11 @@ import styles from '../styles/hero-banner.module.css';
 
 function HeroBanner() {
     const [isTablet, setTablet] = useState(window.innerWidth > 768);
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 1199);
 
     const updateMedia = () => {
         setTablet(window.innerWidth > 768);
+        setDesktop(window.innerWidth > 1199);
     };
 
     useEffect(() => {
@@ -18,8 +20,8 @@ function HeroBanner() {
 
     return (
         <div className={'container ' + styles.container}>
-            { isTablet ? (
-                <div className={'offset-md-5 col-md-1 ' + styles.lineContainer}>
+            { isTablet | isDesktop ? ( 
+                <div className={'offset-11 col-1 offset-l-7 col-l-1 offset-md-5 col-md-1 ' + styles.lineContainer}>
                     <div className={styles.hbline}></div>
                     <div className={styles.contactContainer}>
                         <FontAwesomeIcon icon={faLinkedin} className={styles.socialsDesktop}/>
@@ -30,8 +32,8 @@ function HeroBanner() {
                 </div>
             ) :null }
             <div className='row vcenter'>
-                { isTablet ? null: <div className='line'></div>}
-                <div className='col-s-3 col-md-3 vcenter'>
+                { isTablet | isDesktop  ? null: <div className='line'></div>}
+                <div className='col-6 col-l-4 col-s-3 col-md-3 vcenter'>
                     <div className={styles.textContainer}>
                         <span className={'header-4 ' + styles.welcome}>What's up? I'm</span>
                         <span className={'header-1 ' + styles.fname}>Angelo</span>
@@ -39,16 +41,25 @@ function HeroBanner() {
                         <span className={'header-5 ' + styles.position}>Junior Developer</span>
                     </div>
                 </div>
+                { isDesktop ? (
+                    <div className={'col-6 col-l-4 ' + styles.profileContainer}>
+                        <div className={styles.imgContainer}>
+                            <img src={profpic} />
+                        </div>
+                    </div>
+                ) :null }
             </div>
-            <div className='row'>
-                { isTablet ? null: <div className='line'></div>}
-                <div className={'col-s-3 col-md-6 ' + styles.profileContainer}>
+            { !isDesktop ? (
+                <div className='row'>
+                { isTablet | isDesktop  ? null: <div className='line'></div>}
+                <div className={'offset-l-4 col-l-4 col-s-3 col-md-6 ' + styles.profileContainer}>
                     <div className={styles.imgContainer}>
                         <img src={profpic} />
                     </div>
                 </div>
             </div>
-            { isTablet ? null: (
+            ) :null }
+            { isTablet | isDesktop  ? null: (
                 <div className='row vcenter'>
                     <div className='divider'></div>
                     <div className='col-s-1 real-center'>
