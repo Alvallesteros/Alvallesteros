@@ -101,13 +101,19 @@ code {
   .offset-md-4 {margin-left: 66.66%;}
   .offset-md-5 {margin-left: 83.33%;}
   .offset-md-6 {margin-left: 100%;}
+  .header-1 {font-size: 4rem;}
+  .header-2 {font-size: 3rem}
+  .header-3 {font-size: 2.5rem;}
+  .header-4 {font-size: 2rem;}
+  .header-5 {font-size: 1.5rem;}
+  .header-6 {font-size: 1rem}  
   .web-container {width: 80vw;}
   :root {
     --stroke: 3px
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .col-s-1 {width: 33.33%;}
   .col-s-2 {width: 66.66%;}
   .col-s-3 {width: 100%;}
@@ -125,6 +131,19 @@ code {
     --stroke: 2px
   }
 }
+
+@media only screen and (max-width: 320px) {
+  .header-1 {font-size: 2.5rem;}
+  .header-2 {font-size: 1.75rem}
+  .header-3 {font-size: 1.5rem;}
+  .header-4 {font-size: 1.25rem;}
+  .header-5 {font-size: 1rem;}
+  .header-6 {font-size: 0.5rem}  
+  :root {
+    --stroke: 1px
+  }
+}
+
 
 [class*="col-"] {
   float: left;

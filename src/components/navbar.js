@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 function Navbar() {
-    const [isDesktop, setDesktop] = useState(window.innerWidth > 991);
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 992);
 
     const updateMedia = () => {
-        setDesktop(window.innerWidth > 991);
+        setDesktop(window.innerWidth > 992);
     };
 
     useEffect(() => {
