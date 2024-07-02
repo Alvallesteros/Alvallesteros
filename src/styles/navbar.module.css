@@ -1,69 +1,28 @@
-.container {
-    height: 7vh;
-    width: 83vw;
-    display: flex;
-    margin: 1em 0 1em 0;
+ .logo {
+    max-width: 3rem;
+}
+
+.navbarContainer {
     position: absolute;
     top: 0;
-    z-index: 5;
+    margin: 1rem 0 0 0 ;
+    max-width: 100%;
+    z-index: 50;
 }
 
- .logoContainer {
-    width: 6vw;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
- .logo {
-    max-height: 90%;
-}
-
- .navbarContainer {
-    width: 41vw;
-    margin-left: auto;
-    display: flex;
-    flex-direction: row;
-}
-
- .pagesContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
-    width: 20vw;
-    color: white;
-    font-size: 32px;
-}
-
- .page {
-    width: 6vw;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.75em;
-    font-family: var(--text-font);
-    font-weight: 100;
-}
-
- .searchBar {
+.searchBar {
     background-color: var(--light-gray);
-    display: block;
-    margin-left: auto;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    width: 13vw;
-    height: auto;
-    border-radius: 0.5em;
-    display: flex;
-    align-items: center;
+    border-radius: 10px;
+    padding: 0.75rem 0rem 0.75rem 1rem;
+    font-size: 0.75rem;
+    color: var(--lighter-gray);
+    font-weight: 400;
 }
 
- .searchBar p {
-    margin-left: 1.25em;
-    font-family: var(--text-font);
-    color: #747475;
-    font-weight: 500;
+.hamburger {
+    height: 2rem;
+    padding: 10px 12px;
+    color: var(--yellow);
+    border: 3px solid var(--light-gray);
+    border-radius: 10px;
 }
