@@ -18,6 +18,7 @@ function App() {
         <Skills />
         <Experiences />
         <Projects />
+        <ContactMe />
       </div>
     </div>
   );

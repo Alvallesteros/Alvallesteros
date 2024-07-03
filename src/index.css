@@ -51,10 +51,12 @@ code {
   flex-wrap: wrap;
 }
 
+/*
 .row::after {
   content: "";
   clear: both;
 }
+*/
 
 [class*="web-container"] {
   display: flex;
