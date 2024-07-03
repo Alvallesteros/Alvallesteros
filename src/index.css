@@ -304,3 +304,31 @@ code {
   width: 1.5rem;
   margin-top: 0.25rem;
 }
+
+.background {
+  height: 100%;
+  width: 150vw;
+  background-color: var(--dark-gray);
+  margin-left: -25vw;
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+}
+
+.gradient {
+  height: 15%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(15, 15, 15, 0.5) 0%, rgba(30, 31, 33, 0) 75%);
+}
+
+.button-yellow {
+  background-color: var(--yellow);
+  border-radius: 0.75rem;
+  padding: 1rem 0;
+  color: var(--dark-gray);
+  font-weight: 800;
+  font-size: 1rem;
+}

@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from '../styles/contact.module.css';
-import common from '../styles/common.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 function ContactMe() {
     return (
         <div className={styles.container}>
-            <div className={common.titleText}>
+            <div>
                 <span>C</span>ontact Me
             </div>
             <div className={styles.detailsContainer}>

@@ -122,7 +122,6 @@ function Experiences() {
                 isTablet={isTablet}
                 isDesktop={isDesktop}
             />
-            <div className='divider' style={{top: 'auto', bottom: '0', right: (isDesktop | isTablet) ? '0':null}}></div>
         </div>
     );
 }

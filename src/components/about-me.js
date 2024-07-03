@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from 'react';
 import styles from '../styles/about-me.module.css';
-import common from '../styles/common.module.css';
 
 function AboutMe() {
     const [isTablet, setTablet] = useState(window.innerWidth > 768);
@@ -42,9 +41,9 @@ function AboutMe() {
                 </div>
             </div>
         )}
-        <div className={common.background}>
-            <div className={common.gradient}></div>
-            <div className={common.gradient} style={{transform: "rotate(180deg)"}}></div>
+        <div className='background'>
+            <div className='gradient'></div>
+            <div className='gradient' style={{transform: "rotate(180deg)"}}></div>
         </div>
       </div>
     );

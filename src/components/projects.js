@@ -1,24 +1,36 @@
-import React from 'react';
-import styles from '../styles/projects.module.css'
-import common from '../styles/common.module.css'
+import React, { useEffect, useState } from 'react';
 
 function Projects() {
-    return (
-        <div className={styles.container}>
-            <div className={styles.titleContainer}>
-                <div className={common.titleText}
-                    style={{
-                        fontSize: '6em'
-                }}>
-                    <span>P</span>rojects
+    const [isTablet, setTablet] = useState(window.innerWidth > 767);
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 1023);
+
+    const updateMedia = () => {
+        setTablet(window.innerWidth > 767);
+        setDesktop(window.innerWidth > 1023);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+    });
+
+    return (       
+        <div className='container' style={{marginTop: '0', marginBottom: '0', position: 'relative'}}>
+            <div className='row vcenter'>
+                <div className='hspacer-5'></div>
+                <div className={'col-s-3 col-md-2 col-l-2 offset-l-1 col-3 offset-1 ' + ((isTablet | isDesktop) ? null: 'real-center')} style={{padding: '0'}}>
+                    <span className='header-3 title-design '>
+                        <span>P</span>rojects
+                    </span>
                 </div>
+                <div className='col-s-3 col-md-2 offset-md-2 col-l-2 offset-l-2 col-3 offset-4 button-yellow real-center'>
+                    Go To Projects
+                </div>
+                <div className='hspacer-5'></div>
             </div>
-            <div className={styles.button}>
-                <span>Go to Projects</span>
-            </div>
-            <div className={common.background}>
-                <div className={common.gradient}></div>
-                <div className={common.gradient} style={{transform: "rotate(180deg)"}}></div>
+            <div className='background'>
+                <div className='gradient'></div>
+                <div className='gradient' style={{transform: "rotate(180deg)"}}></div>
             </div>
         </div>
     );
