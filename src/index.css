@@ -17,6 +17,7 @@
   --base-hspacer: 1rem;
 }
 
+
 html {
   overflow-y: scroll;
 }
@@ -110,9 +111,35 @@ code {
 }
 
 .text {
-  font-size: 1em;
+  font-size: 1rem;
   font-family: var(--text-font);
   color: white;
+}
+
+.fill-yellow {background-color: var(--yellow);}
+
+.text-date {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--dark-gray);
+  text-align: center;
+}
+
+.text-bold {font-weight: 700;}
+.text-yellow {color: var(--yellow)}
+
+.hspacer-1 {padding: calc(var(--base-hspacer) * 3) 0}
+.hspacer-2 {padding: calc(var(--base-hspacer) * 2.5) 0}
+.hspacer-3 {padding: calc(var(--base-hspacer) * 2) 0}
+.hspacer-4 {padding: calc(var(--base-hspacer) * 1.5) 0}
+.hspacer-5 {padding: calc(var(--base-hspacer) * 1) 0}
+.hspacer-6 {padding: calc(var(--base-hspacer) * 0.5) 0}
+
+[class*="hspacer-"] {
+  float: left;
+  width: 100vw;
+  border: 0px solid red;
+  display: flex;
 }
 
 

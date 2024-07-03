@@ -4,13 +4,13 @@ import common from '../styles/common.module.css';
 
 const ExpDate = ({ date }) => {
     return (
-        <div className={styles.dateContainer}>
-            <div className={styles.hlines}></div>
-            <div className={styles.date}>
-                <span>{ date }</span>
+       <div className='row' style={{position: 'relative'}}>
+            <div className='divider'></div>
+            <div className='col-s-3 real-center fill-yellow'>
+                <span className='text-date'>{date}</span>
             </div>
-            <div className={styles.hlines}></div>
-        </div>
+            <div className='divider' style={{top: 'auto', bottom: '0'}}></div>
+       </div>
     );
 }
 
@@ -18,21 +18,25 @@ const OpenPosition = ({
     organization, position, responsibilities
 }) => {
     return (
-        <div className={styles.expContainer}>
-            <div className={styles.titleContainer} style={{marginTop: "5vh"}}>
-                <span className={styles.org}>{ organization }</span>
-                <span className={styles.pos}>{ position }</span>
-            </div>
-            <div className={styles.respContainer}>
-                {responsibilities.map((item, index) => (
-                    <div key={index} className={styles.respItem}>
-                        <div className={styles.bulletContainer}>
-                            <div className={styles.line}></div> 
-                        </div>
+        <div>
+            <div className='row'>
+                <div className='hspacer-3'></div>
+                <div className='col-s-3' style={{padding: '0'}}>
+                    <span className='header-4 text-bold'>{organization}</span>
+                </div>
+                <div className='col-s-3' style={{padding: '0'}}>
+                    <span className='header-6 text-yellow'>{position}</span>
+                </div>
+            </div> 
+            {responsibilities.map((item, index) => (
+                <div className='row'>
+                    <div className='hspacer-5'></div>
+                    <div className='col-s-3' style={{padding: '0'}}>
                         <span>{item}</span>
                     </div>
-                ))}
-            </div>
+                </div>
+            ))}
+            <div className='hspacer-3'></div>
         </div>
     );
 }
@@ -41,23 +45,31 @@ const ClosePosition = ({
     organization, position
 }) => {
     return (
-        <div className={styles.expContainer}>
-            <div className={styles.titleContainer} style={{marginBottom: "0"}}>
-                <span className={styles.org}>{ organization }</span>
-                <span className={styles.pos}>{ position }</span>
+        <div className='row'>
+            <div className='hspacer-5'></div>
+            <div className='col-s-3' style={{padding: '0'}}>
+                <span className='header-4 text-bold'>{organization}</span>
             </div>
-        </div>
+            <div className='col-s-3' style={{padding: '0'}}>
+                <span className='header-6 text-yellow'>{position}</span>
+            </div>
+            <div className='hspacer-5'></div>
+        </div> 
     );
 }
 
 
 function Experiences() {
     return (
-        <div className={styles.container}>
-            <div className={common.titleText}>
-                <span>E</span>xperiences
+        <div className={'container ' + styles.container} style={{margin: '0', paddingBottom: '0'}}>
+            <div className='row'>
+                <div className='col-s-3 col-md-6 col-l-8 col-12' style={{paddingLeft: '0', paddingBottom: '0', marginBottom: '-1rem'}}>
+                    <div className='header-3 title-design'>
+                        <span>E</span>xperiences
+                    </div>
+                </div>
             </div>
-            <ExpDate date={'June 2023 - May 2024'} />
+            <ExpDate date={'June 2023 - July 2024'} />
             <OpenPosition 
                 organization={"Computer Society of the Ateneo"}
                 position={"Vice President for Development and Training"}
@@ -71,10 +83,7 @@ function Experiences() {
                 organization={"MSCI Inc."}
                 position={"DevOps Intern"}
             />
-            <div className={styles.hlines} style={{width: "80vw"}}></div>
-            <div className={common.lefthandContainer}>
-                <div className={common.line}></div>
-            </div>
+            <div className='divider' style={{top: 'auto', bottom: '0'}}></div>
         </div>
     );
 }

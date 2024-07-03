@@ -16,6 +16,7 @@ function App() {
         <HeroBanner />
         <AboutMe />
         <Skills />
+        <Experiences />
       </div>
     </div>
   );
