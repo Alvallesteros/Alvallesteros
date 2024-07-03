@@ -12,6 +12,7 @@
     flex-direction: column;
     line-height: 2.75rem;
     padding-right: 0.25rem;
+    pointer-events: none;
 }
 
 
@@ -43,6 +44,7 @@
 .profileContainer {
     position: relative;
     height: 45vh;
+    pointer-events: none;
 }
 
 .imgContainer {
@@ -62,13 +64,29 @@
 .socials {
     color: var(--yellow);
     height: 1.5rem;
-    z-index: 50;
+    z-index: 150;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: height .3s;
+}
+
+.socials:hover {
+    height: 1.75rem;
+    transition: height .3s;
 }
 
 .socialsDesktop {
     color: var(--yellow);
     height: 2rem;
-    z-index: 50;
+    z-index: 150;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: height .3s;
+}
+
+.socialsDesktop:hover {
+    height: 2.25rem;
+    transition: height .3s;
 }
 
 .lineContainer {

@@ -298,7 +298,7 @@ code {
   flex-grow: 1;
   font-size: 1.25rem;
   font-weight: 400;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
 }
 
 .bullet-line {

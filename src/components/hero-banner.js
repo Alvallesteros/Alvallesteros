@@ -33,7 +33,7 @@ function HeroBanner() {
             ) :null }
             <div className='row' style={{position: 'relative'}}>
                 { isTablet | isDesktop  ? null: <div className='line'></div>}
-                <div className='col-6 col-l-4 col-s-3 col-md-3 vcenter'>
+                <div className='col-6 col-l-4 col-s-3 col-md-3 vcenter unselectable'>
                     <div className={styles.textContainer}>
                         <span className={'header-4 ' + styles.welcome}>What's up? I'm</span>
                         <span className={'header-1 ' + styles.fname}>Angelo</span>
@@ -42,9 +42,9 @@ function HeroBanner() {
                     </div>
                 </div>
                 { isDesktop ? (
-                    <div className={'col-6 col-l-4 ' + styles.profileContainer}>
+                    <div className={'col-6 col-l-4 unselectable ' + styles.profileContainer}>
                         <div className={styles.imgContainer}>
-                            <img src={profpic} />
+                            <img src={profpic}/>
                         </div>
                     </div>
                 ) :null }
@@ -60,7 +60,7 @@ function HeroBanner() {
             </div>
             ) :null }
             { isTablet | isDesktop  ? null: (
-                <div className='row' style={{position: 'relative'}}>
+                <div className='row' style={{position: 'relative', pointerEvents: 'auto'}}>
                     <div className='divider'></div>
                     <div className='col-s-1 real-center'>
                         <FontAwesomeIcon icon={faLinkedin} className={styles.socials}/>
