@@ -31,7 +31,7 @@ function HeroBanner() {
                     <div className={styles.hbline}></div>
                 </div>
             ) :null }
-            <div className='row vcenter'>
+            <div className='row' style={{position: 'relative'}}>
                 { isTablet | isDesktop  ? null: <div className='line'></div>}
                 <div className='col-6 col-l-4 col-s-3 col-md-3 vcenter'>
                     <div className={styles.textContainer}>
@@ -50,7 +50,7 @@ function HeroBanner() {
                 ) :null }
             </div>
             { !isDesktop ? (
-                <div className='row'>
+                <div className='row' style={{position: 'relative'}}>
                 { isTablet | isDesktop  ? null: <div className='line'></div>}
                 <div className={'offset-l-4 col-l-4 col-s-3 col-md-6 ' + styles.profileContainer}>
                     <div className={styles.imgContainer}>
@@ -60,7 +60,7 @@ function HeroBanner() {
             </div>
             ) :null }
             { isTablet | isDesktop  ? null: (
-                <div className='row vcenter'>
+                <div className='row' style={{position: 'relative'}}>
                     <div className='divider'></div>
                     <div className='col-s-1 real-center'>
                         <FontAwesomeIcon icon={faLinkedin} className={styles.socials}/>
