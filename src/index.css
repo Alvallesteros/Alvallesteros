@@ -168,7 +168,7 @@ code {
   .offset-10 {margin-left: 83.33%;}
   .offset-11 {margin-left: 91.66%;}
   .offset-12 {margin-left: 100%;}
-  .web-container {width: 85vw;}
+  .web-container {width: 70vw;}
   .header-1 {font-size: 5rem;}
   .header-2 {font-size: 4rem}
   .header-3 {font-size: 3rem;}
@@ -197,7 +197,7 @@ code {
   .offset-l-6 {margin-left: 75%;}
   .offset-l-7 {margin-left: 87.5%;}
   .offset-l-8 {margin-left: 100%;}
-  .web-container {width: 85vw;}
+  .web-container {width: 80vw;}
   .header-1 {font-size: 4rem;}
   .header-2 {font-size: 3rem}
   .header-3 {font-size: 2.5rem;}
@@ -297,4 +297,10 @@ code {
   font-size: 1.25rem;
   font-weight: 400;
   padding: 1rem 0;
+}
+
+.bullet-line {
+  border-top: solid var(--yellow);
+  width: 1.5rem;
+  margin-top: 0.25rem;
 }
