@@ -20,7 +20,7 @@ function Skills() {
         <div className='container' style={{padding: '2rem 0', position: 'relative', margin: '0rem'}}>
             <div className='row vcenter'>
                 { isTablet | isDesktop  ? <div className='line'></div> :null }
-                <div className='col-s-3 col-md-6 col-l-8 col-12 real-center'>
+                <div className='col-s-3 col-md-6 col-l-8 col-12 real-center unselectable'>
                     <div className='header-3 title-design'>
                         <span>S</span>kills
                     </div>

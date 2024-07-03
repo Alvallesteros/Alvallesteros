@@ -276,6 +276,8 @@ code {
   min-height: 4rem;
   display: flex;
   padding: 0 1rem;
+  cursor: pointer;
+  transition: background-color .3s;
 }
 
 .image-container {
@@ -292,6 +294,7 @@ code {
 .image-container .icon {
   height: 60%;
   color: var(--yellow);
+  transition: color .3s;
 }
 
 .text-container {
@@ -299,6 +302,20 @@ code {
   font-size: 1.25rem;
   font-weight: 400;
   padding: 1rem 1rem;
+  transition: color .3s;
+}
+
+.item-container:hover {
+  background-color: var(--yellow);
+  transition: background-color .3s;
+}
+.item-container:hover .image-container .icon {
+  color: var(--dark-gray);
+  transition: color .3s;
+}
+.item-container:hover .text-container {
+  color: var(--dark-gray);
+  transition: color .3s;
 }
 
 .bullet-line {
@@ -333,6 +350,15 @@ code {
   color: var(--dark-gray);
   font-weight: 800;
   font-size: 1rem;
+  outline: 0px solid var(--yellow);
+  transition: all .3s;
+}
+
+.button-yellow:hover {
+  background-color: rgba(0,0,0,0);
+  color: var(--yellow);
+  outline: 2px solid var(--yellow);
+  transition: all .3s;
 }
 
 .unselectable {user-select: none;}

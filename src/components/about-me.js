@@ -18,7 +18,7 @@ function AboutMe() {
     return (
       <div className={'container ' + styles.container}>
         <div className='row vcenter'>
-            <div className={'col-s-3 col-md-3 col-l-3 col-4 ' + ((isTablet | isDesktop) ? null: 'real-center' )} style={{paddingTop: isDesktop ? '0r': '2rem', paddingBottom: isDesktop ? '6rem': '0'}}>
+            <div className={'col-s-3 col-md-3 col-l-3 col-4 unselectable ' + ((isTablet | isDesktop) ? null: 'real-center' )} style={{paddingTop: isDesktop ? '0r': '2rem', paddingBottom: isDesktop ? '6rem': '0'}}>
                 <span className={'header-3 title-design ' + styles.title}>
                     <span>A</span>bout Me
                     <div className={styles.hline}></div>
