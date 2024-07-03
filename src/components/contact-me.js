@@ -1,28 +1,52 @@
-import React from 'react';
-import styles from '../styles/contact.module.css';
-import common from '../styles/common.module.css';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 function ContactMe() {
+    const [isTablet, setTablet] = useState(window.innerWidth > 767);
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 1023);
+
+    const updateMedia = () => {
+        setTablet(window.innerWidth > 767);
+        setDesktop(window.innerWidth > 1023);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+    });
+
     return (
-        <div className={styles.container}>
-            <div className={common.titleText}>
-                <span>C</span>ontact Me
+        <div className='container' style={{position: 'relative'}}>
+            <div className='row'>
+                <div className='col-s-3 col-md-6 col-l-8 col-12 real-center'>
+                    <div className='header-3 title-design'>
+                        <span>C</span>ontact Me
+                    </div>
+                </div>
             </div>
-            <div className={styles.detailsContainer}>
-                <div className={styles.detail}>
-                    <div className={styles.imgContainer}>
-                        <FontAwesomeIcon icon={faPhone} className={styles.img}/>
+            <div className='row' style={{gap: '1rem', justifyContent: 'center'}}>
+                <div className='col-s-1 real-center item-container'>
+                    <div className='image-container'>
+                        <FontAwesomeIcon icon={faPhone} className='icon'/>
                     </div>
-                    <span>(+63) 943 316 4313</span>
+                    { isTablet | isDesktop ? (
+                        <div className='text-container'>
+                            <span>(+63) 943 316 4313</span>
+                        </div>
+                    ) :null }
                 </div>
-                <div className={styles.detail} style={{width:'27vw'}}>
-                    <div className={styles.imgContainer}>
-                        <FontAwesomeIcon icon={faEnvelope} className={styles.img}/>
+                <div className='col-s-1 real-center item-container'>
+                    <div className='image-container'>
+                        <FontAwesomeIcon icon={faEnvelope} className='icon'/>
                     </div>
-                    <span>aj.alvallesteros@gmail.com</span>
+                    { isTablet | isDesktop ? (
+                        <div className='text-container'>
+                            <span>aj.alvallesteros@gmail.com</span>
+                        </div>
+                    ) :null }
                 </div>
+                <div className='hspacer-5'></div>
             </div>
         </div>
     );
