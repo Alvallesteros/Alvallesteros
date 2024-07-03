@@ -1,5 +1,12 @@
  .logo {
     width: 50%;
+    cursor: pointer;
+    transition: width .3s;
+}
+
+.logo:hover {
+    width: 60%;
+    transition: width .3s;
 }
 
 .navbarContainer {
@@ -9,13 +16,27 @@
     z-index: 50;
 }
 
-.searchBar {
+.searchBar input {
     background-color: var(--light-gray);
     border-radius: 10px;
-    padding: 0.75rem 0rem 0.75rem 1rem;
+    padding: 0.75rem 1rem;
     font-size: 0.75rem;
+    font-family: var(--text-font);
     color: var(--lighter-gray);
+    outline: 0px solid var(--light-gray);
     font-weight: 400;
+    flex-grow: 1;
+    border: 0;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.searchBar input:focus {
+    border: 0;
+    outline: 2px solid var(--light-gray);
+    background-color: var(--dark-gray);
+    color: white;
+    transition: all .3s;
 }
 
 .hamburger {
@@ -29,4 +50,23 @@
 
 .burgerContainer {
     padding-right: 0;
+}
+
+.navpage {
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.navpage::after {
+    content: '';
+    display: block;
+    margin-top: 3px;
+    width: 0;
+    height: 2px;
+    background: var(--yellow);
+    transition: width .3s;
+}
+
+.navpage:hover::after{
+    width: 100%;
 }

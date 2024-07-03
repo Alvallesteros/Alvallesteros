@@ -24,17 +24,17 @@ function Navbar() {
                 </div>
                 { isDesktop ? (
                     <div className='row offset-5 col-6 col-l-7 col-md-5 vcenter'>
-                        <div className='col-2 col-l-1 col-md-1 offset-l-2 real-center'>
+                        <div className={'col-2 col-l-1 col-md-1 offset-l-2 real-center ' + styles.navpage}>
                             Home
                         </div>
-                        <div className='col-2 col-l-1 col-md-1 real-center'>
+                        <div className={'col-2 col-l-1 col-md-1 real-center ' + styles.navpage}>
                             Projects
                         </div>
-                        <div className='col-2 col-l-1 col-md-1 real-center'>
+                        <div className={'col-2 col-l-1 col-md-1 real-center ' + styles.navpage}>
                             About
                         </div>
                         <div className={"col-4 col-l-2 col-md-2 offset-2 offset-l-1 offset-md-1 " + styles.searchBar}>
-                            Search...
+                            <input type='text' placeholder='Search...'/>
                         </div>
                     </div>
                 ) : (
