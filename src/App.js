@@ -14,6 +14,8 @@ function App() {
       <div className='web-container'>
         <Navbar />
         <HeroBanner />
+        <AboutMe />
+        <Skills />
       </div>
     </div>
   );
