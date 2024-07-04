@@ -37,10 +37,10 @@ function HeroBanner() {
                 { isTablet | isDesktop  ? null: <div className='line'></div>}
                 <div className='col-6 col-l-4 col-s-3 col-md-3 vcenter unselectable'>
                     <div className={styles.textContainer}>
-                        <span className={'header-4 ' + styles.welcome}>What's up? I'm</span>
+                        <span className={'header-6 ' + styles.welcome}>What's up? I'm</span>
                         <span className={'header-1 ' + styles.fname}>Angelo</span>
                         <span className={'header-1 ' + styles.lname}><span>Alva</span>rez</span>
-                        <span className={'header-5 ' + styles.position}>Junior Developer</span>
+                        <span className={'header-6 ' + styles.position}>Junior Developer</span>
                     </div>
                 </div>
                 { isDesktop ? (

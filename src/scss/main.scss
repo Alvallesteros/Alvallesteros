@@ -1,0 +1,73 @@
+@import './variables.scss';
+
+// Spacer 
+$i: 6;
+@while $i > 0 {
+    .p-#{$i} { padding: (7 - $i) * 0.5rem !important; }
+    .px-#{$i} { padding: 0 ((7 - $i) * 0.5rem) !important; }
+    .py-#{$i} { padding: ((7 - $i) * 0.5rem) 0 !important; }
+    .pt-#{$i} { padding: ((7 - $i) * 0.5rem) 0 0 0 !important; }
+    .pr-#{$i} { padding: 0 ((7 - $i) * 0.5rem) 0 0 !important; }
+    .pb-#{$i} { padding: 0 0 ((7 - $i) * 0.5rem) 0 !important; }
+    .pl-#{$i} { padding: 0 0 0 ((7 - $i) * 0.5rem) !important; }
+    .m-#{$i} { margin: (7 - $i) * 0.5rem !important; }
+    .mx-#{$i} { margin: 0 ((7 - $i) * 0.5rem) !important; }
+    .my-#{$i} { margin: ((7 - $i) * 0.5rem) 0 !important; }
+    .mt-#{$i} { margin: ((7 - $i) * 0.5rem) 0 0 0 !important; }
+    .mr-#{$i} { margin: 0 ((7 - $i) * 0.5rem) 0 0 !important; }
+    .mb-#{$i} { margin: 0 0 ((7 - $i) * 0.5rem) 0 !important; }
+    .ml-#{$i} { margin: 0 0 0 ((7 - $i) * 0.5rem) !important; }
+    $i: $i - 1;
+}
+
+.xcenter {justify-content: center;}
+.ycenter {align-items: center;}
+.fill-height {height: 100%;}
+
+@mixin col {
+    float: left;
+    padding: 10px; 
+    border: 0px solid red;
+    display: flex;
+}
+
+//No. Columns
+$a: 12;
+$b: 8;
+$c: 4;
+@media only screen and (min-width: 1400px) {
+    .web-container {width: 70vw;}
+    @while $a > 0 {
+        .col-#{$a} { 
+            width: ($a / 12) * 100%;
+            @include col 
+        }
+        .offset-#{$a} { 
+            margin-left: ($a / 12) * 100%;
+            @include col 
+        } 
+        $a: $a - 1;
+    }
+    $j: 6;
+    @while $j > 0 {
+        .header-#{$j} {
+            font-size: 5rem - ($j * 0.5);
+        }
+        .subheader-#{$j} {
+            font-size: 2rem - ($j * 0.15);
+        }
+        $j: $j - 1;
+    }
+    :root {
+        $stroke: 4px;
+        font-size: 20px;
+    }
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@import './exp.scss';

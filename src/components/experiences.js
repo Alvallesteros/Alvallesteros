@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 const ExpDate = ({ date, isTablet, isDesktop }) => {
     return (
@@ -13,55 +15,51 @@ const ExpDate = ({ date, isTablet, isDesktop }) => {
     );
 }
 
-const OpenPosition = ({
+const Accordion = ({
     organization, position, responsibilities, isTablet, isDesktop
 }) => {
+    const [isHover, setHover] = useState(false);
+    const [isOpen, setOpen] = useState(false);
+
     return (
-        <div>
-            <div className='row'>
-                <div className='hspacer-3'></div>
-                <div className='col-s-3 col-md-6 col-l-7 offset-l-1 col-11 offset-1' style={{padding: '0'}}>
-                    <span className='header-4 text-bold'>{organization}</span>
-                </div>
-                <div className='col-s-3 col-md-6 col-l-7 offset-l-1 col-11 offset-1' style={{padding: '0'}}>
-                    <span className='header-6 text-yellow'>{position}</span>
-                </div>
-            </div> 
-            {responsibilities.map((item) => (
-                <div className='row'>
-                    <div className='hspacer-5'></div>
-                    { isTablet | isDesktop ? (
-                        <div className='col-md-1 col-l-1 col-1' style={{
-                            justifyContent: 'center'
-                        }}>
-                            <div className='bullet-line'></div>
-                        </div>
-                    ) :null }
-                    <div className='col-s-3 col-md-4 col-l-6 col-10' style={{padding: '0'}}>
-                        <span className='text' style={{fontSize: '1rem', lineHeight: '1.5rem'}}>{item}</span>
+        <div className='row ycenter'>
+            <div 
+                className={'row ycenter ' + ('titleCard')}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                onClick={() => setOpen(!isOpen)}
+            >
+                <div className='p-4 col-12'></div>
+                <div className='row col-9 offset-1 '>
+                    <div className='col-s-3 col-md-6 col-l-7 offset-l-1 col-12' style={{padding: '0'}}>
+                        <span className='header-5 text-bold org'>{organization}</span>
+                    </div>
+                    <div className='col-s-3 col-md-6 col-l-7 offset-l-1 col-12' style={{padding: '0'}}>
+                        <span className='subheader-3 text-yellow position'>{position}</span>
                     </div>
                 </div>
-            ))}
-            <div className='hspacer-3'></div>
+                <div className='row col-2 xcenter ycenter'>
+                    {isHover ? <FontAwesomeIcon icon={faChevronDown} className={'icon ' + (isOpen ? 'up' :null)}/> :null}
+                </div>
+                <div className={'col-12 row fold-content ' + (isOpen ? 'open' :null )}>
+                    {responsibilities.map((item) => (
+                            <div className={'col-12 row'}>
+                                <div className='col-12 p-6'></div>
+                                { isTablet | isDesktop ? (
+                                    <div className='col-1 xcenter'>
+                                        <div className='bullet-line'></div>
+                                    </div>
+                                ) :null }
+                                <div className='col-10' style={{padding: '0'}}>
+                                    <span className='text' style={{fontSize: '1rem', lineHeight: '1.5rem'}}>{item}</span>
+                                </div>
+                            </div>
+                        ))}
+                </div>
+                <div className='p-4 col-12'></div>
+            </div>
         </div>
-    );
-}
-
-const ClosePosition = ({
-    organization, position
-}) => {
-    return (
-        <div className='row'>
-            <div className='hspacer-5'></div>
-            <div className='col-s-3 col-md-6 col-l-7 offset-l-1 col-11 offset-1' style={{padding: '0'}}>
-                <span className='header-4 text-bold'>{organization}</span>
-            </div>
-            <div className='col-s-3 col-md-6 col-l-7 offset-l-1 col-11 offset-1' style={{padding: '0'}}>
-                <span className='header-6 text-yellow'>{position}</span>
-            </div>
-            <div className='hspacer-5'></div>
-        </div> 
-    );
+    )
 }
 
 
@@ -91,7 +89,7 @@ function Experiences() {
             { isTablet | isDesktop  ? <div className='line'></div> :null }
             <div className='row'>
                 <div className='col-s-3 col-md-6 col-l-8 col-12' style={{paddingLeft: '0', paddingBottom: '0', marginBottom: '-1rem'}}>
-                    <div className='header-3 title-design'>
+                    <div className='header-4 title-design'>
                         <span>E</span>xperiences
                     </div>
                 </div>
@@ -101,7 +99,7 @@ function Experiences() {
                 isTablet={isTablet}
                 isDesktop={isDesktop} 
             />
-            <OpenPosition 
+            <Accordion 
                 organization={"Computer Society of the Ateneo"}
                 position={"Vice President for Development and Training"}
                 responsibilities={[
@@ -116,9 +114,13 @@ function Experiences() {
                 isTablet={isTablet}
                 isDesktop={isDesktop} 
             />
-            <ClosePosition
+            <Accordion 
                 organization={"MSCI Inc."}
                 position={"DevOps Intern"}
+                responsibilities={[
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lorem auctor, malesuada risus eget, laoreet arcu. Mauris id neque in odio mollis scelerisque.",
+                    "Curabitur eget velit et diam consectetur pharetra. Cras commodo purus ac sem scelerisque imperdiet."
+                ]}
                 isTablet={isTablet}
                 isDesktop={isDesktop}
             />
