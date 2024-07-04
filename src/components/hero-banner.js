@@ -21,14 +21,16 @@ function HeroBanner() {
     return (
         <div className={'container ' + styles.container}>
             { isTablet | isDesktop ? ( 
-                <div className={'offset-11 col-1 offset-l-7 col-l-1 offset-md-5 col-md-1 ' + styles.lineContainer}>
-                    <div className={styles.hbline}></div>
-                    <div className={styles.contactContainer}>
-                        <FontAwesomeIcon icon={faLinkedin} className={styles.socialsDesktop}/>
-                        <FontAwesomeIcon icon={faGithub} className={styles.socialsDesktop}/>
-                        <FontAwesomeIcon icon={faTelegram} className={styles.socialsDesktop}/>
+                <div className={'offset-11 col-1 offset-l-7 col-l-1 offset-md-5 col-md-1'} style={{position: 'absolute', height: '100%', zIndex: '150'}}>
+                    <div className={styles.lineContainer}>
+                        <div className={styles.hbline}></div>
+                        <div className={styles.contactContainer}>
+                            <FontAwesomeIcon icon={faLinkedin} className={styles.socialsDesktop}/>
+                            <FontAwesomeIcon icon={faGithub} className={styles.socialsDesktop}/>
+                            <FontAwesomeIcon icon={faTelegram} className={styles.socialsDesktop}/>
+                        </div>
+                        <div className={styles.hbline}></div>
                     </div>
-                    <div className={styles.hbline}></div>
                 </div>
             ) :null }
             <div className='row' style={{position: 'relative'}}>

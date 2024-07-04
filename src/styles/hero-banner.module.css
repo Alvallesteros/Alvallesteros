@@ -81,12 +81,12 @@
     z-index: 150;
     pointer-events: auto;
     cursor: pointer;
-    transition: height .3s;
+    transition: all .3s;
 }
 
 .socialsDesktop:hover {
     height: 2.25rem;
-    transition: height .3s;
+    transition: all .3s;
 }
 
 .lineContainer {
@@ -94,17 +94,19 @@
     display: flex;
     position: absolute;
     flex-direction: column;
+    align-items: center;
+    right: -1.5rem;
     top: 0;
     padding: 0 0 0 0;
     z-index: 50;
+    min-width: 2.75rem;
 }
 
 .contactContainer {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: end;
-    margin-right: -1rem;
+    align-items: center;
     gap: 1rem;
     padding: 1rem 0 1rem 0;
 }
