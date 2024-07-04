@@ -18,19 +18,19 @@ function Navbar() {
 
     return (
         <div className={'container ' + styles.navbarContainer}>
-            <div className='row vcenter'>
-                <div className='col-1 col-l-1 col-md-1 col-s-1 real-center'>
+            <div className='row ycenter'>
+                <div className='col-1 col-l-1 col-md-1 col-s-1 center'>
                     <img src={logo} className={styles.logo}/>
                 </div>
                 { isDesktop ? (
-                    <div className='row offset-5 col-6 col-l-7 col-md-5 vcenter'>
-                        <div className={'col-2 col-l-1 col-md-1 offset-l-2 real-center ' + styles.navpage}>
+                    <div className='row offset-5 col-6 col-l-7 col-md-5 ycenter'>
+                        <div className={'col-2 col-l-1 col-md-1 offset-l-2 center ' + styles.navpage}>
                             Home
                         </div>
-                        <div className={'col-2 col-l-1 col-md-1 real-center ' + styles.navpage}>
+                        <div className={'col-2 col-l-1 col-md-1 center ' + styles.navpage}>
                             Projects
                         </div>
-                        <div className={'col-2 col-l-1 col-md-1 real-center ' + styles.navpage}>
+                        <div className={'col-2 col-l-1 col-md-1 center ' + styles.navpage}>
                             About
                         </div>
                         <div className={"col-4 col-l-2 col-md-2 offset-2 offset-l-1 offset-md-1 " + styles.searchBar}>
@@ -38,7 +38,7 @@ function Navbar() {
                         </div>
                     </div>
                 ) : (
-                    <div className={'col-md-1 col-s-1 offset-md-4 offset-s-1 vcenter align-end ' + styles.burgerContainer}>
+                    <div className={'col-md-1 col-s-1 offset-md-4 offset-s-1 ycenter justify-end ' + styles.burgerContainer}>
                         <FontAwesomeIcon icon={faBars} className={styles.hamburger}/>
                     </div>
                 )}

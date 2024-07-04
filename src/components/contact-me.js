@@ -19,14 +19,14 @@ function ContactMe() {
     return (
         <div className='container' style={{position: 'relative'}}>
             <div className='row'>
-                <div className='col-s-3 col-md-6 col-l-8 col-12 real-center'>
+                <div className='col-s-3 col-md-6 col-l-8 col-12 center'>
                     <div className='header-3 title-design'>
                         <span>C</span>ontact Me
                     </div>
                 </div>
             </div>
             <div className='row' style={{gap: '1rem', justifyContent: 'center'}}>
-                <div className='col-s-1 real-center item-container'>
+                <div className='col-s-1 center item-container'>
                     <div className='image-container'>
                         <FontAwesomeIcon icon={faPhone} className='icon'/>
                     </div>
@@ -36,7 +36,7 @@ function ContactMe() {
                         </div>
                     ) :null }
                 </div>
-                <div className='col-s-1 real-center item-container'>
+                <div className='col-s-1 center item-container'>
                     <div className='image-container'>
                         <FontAwesomeIcon icon={faEnvelope} className='icon'/>
                     </div>

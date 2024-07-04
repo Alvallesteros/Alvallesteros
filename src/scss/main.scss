@@ -1,4 +1,50 @@
 @import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+html {
+    overflow-y: scroll;
+    background-color: $bg-gray;
+}
+  
+body {
+    margin: 0;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+}
+
+.background {
+    height: 100%;
+    width: 150vw;
+    background-color: $dark-gray;
+    margin-left: -25vw;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+  }
+  
+  .gradient {
+    height: 15%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.5) 0%, rgba(30, 31, 33, 0) 75%);
+  }
 
 // Spacer 
 $i: 6;
@@ -20,9 +66,41 @@ $i: 6;
     $i: $i - 1;
 }
 
+.unselectable {user-select: none;}
 .xcenter {justify-content: center;}
 .ycenter {align-items: center;}
-.fill-height {height: 100%;}
+.center {    
+    align-items: center;
+    justify-content: center;
+  }
+.align {
+    &-end { align-items: end; }
+    &-start { align-items: start; }
+}
+.justify {
+    &-end { justify-content: end; }
+    &-start { justify-content: start; }
+}
+.fill {
+    &-height { height: 100%; }
+    &-yellow { background-color: $yellow; }
+}
+.text {
+    font-size: 1rem;
+    font-family: $main-font;
+    color: white;
+
+    &-date {
+        font-weight: 800;
+        color: $dark-gray;
+        text-align: center;
+    }
+
+    &-bold { font-weight: 700; }
+    &-yellow { color: $yellow; }
+
+}
+
 
 @mixin col {
     float: left;
@@ -31,12 +109,76 @@ $i: 6;
     display: flex;
 }
 
+@mixin webContainer {
+    display: flex;
+    margin: auto;
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+@mixin strokes($stroke) {
+    .title-design span {
+        -webkit-text-stroke-width: $stroke;
+    }
+    .line {
+        border-left: $stroke solid $yellow;
+    }
+    .divider {
+        border-top: $stroke solid $yellow;
+    }
+    .bullet-line {
+        border-top: $stroke solid $yellow;
+    }
+}
+
+@mixin base-font-size($size) {
+    root: { font-size: $size; }
+}
+
+.title-design {
+    color: $yellow;
+    font-family: $display-font;
+    font-weight: 700;
+    span {
+        color: rgba(0, 0, 0, 0);
+        -webkit-text-stroke-color: $yellow;
+    }
+}
+
+.line {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+
+.divider {
+    position: absolute;
+    top: 0;
+    right: -50vw;
+    z-index: 100;
+    width: 150vw;
+}
+
+.bullet-line {
+    width: 1.5rem;
+    margin-top: 0.25rem;
+}
+  
+
 //No. Columns
-$a: 12;
 $b: 8;
 $c: 4;
 @media only screen and (min-width: 1400px) {
-    .web-container {width: 70vw;}
+    .web-container {
+        width: 70vw;
+        @include webContainer;
+    }
+    $a: 12;
     @while $a > 0 {
         .col-#{$a} { 
             width: ($a / 12) * 100%;
@@ -51,20 +193,178 @@ $c: 4;
     $j: 6;
     @while $j > 0 {
         .header-#{$j} {
-            font-size: 5rem - ($j * 0.5);
+            font-size: 5rem - ($j * (3/6));
         }
         .subheader-#{$j} {
-            font-size: 2rem - ($j * 0.15);
+            font-size: 2rem - ($j * (1/6));
         }
         $j: $j - 1;
     }
-    :root {
-        $stroke: 4px;
-        font-size: 20px;
+    @include strokes(3px);
+    @include base-font-size(20px);
+}
+@media only screen and (min-width: 1024px) and (max-width: 1399px)  {
+    .web-container {
+        width: 80vw;
+        @include webContainer;
     }
+    $a: 12;
+    @while $a > 0 {
+        .col-lg-#{$a} { 
+            width: ($a / 12) * 100%;
+            @include col 
+        }
+        .offset-lg-#{$a} { 
+            margin-left: ($a / 12) * 100%;
+            @include col 
+        } 
+        $a: $a - 1;
+    }
+    $j: 6;
+    @while $j > 0 {
+        .header-#{$j} {
+            font-size: 4rem - ($j * (2/6));
+        }
+        .subheader-#{$j} {
+            font-size: 2rem - ($j * (1/6));
+        }
+        $j: $j - 1;
+    }
+    @include strokes(3px);
+    @include base-font-size(18px);
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .web-container {
+        width: 80vw;
+        @include webContainer;
+    }
+    $a: 8;
+    @while $a > 0 {
+        .col-md-#{$a} { 
+            width: ($a / 12) * 100%;
+            @include col 
+        }
+        .offset-md-#{$a} { 
+            margin-left: ($a / 12) * 100%;
+            @include col 
+        } 
+        $a: $a - 1;
+    }
+    $j: 6;
+    @while $j > 0 {
+        .header-#{$j} {
+            font-size: 3rem - ($j * (1/6));
+        }
+        .subheader-#{$j} {
+            font-size: 2rem - ($j * (1/6));
+        }
+        $j: $j - 1;
+    }
+    @include strokes(3px);
+    @include base-font-size(16px);
+}
 
+@media only screen and (max-width: 768px) {
+    .web-container {
+        width: 75vw;
+        @include webContainer;
+    }
+    $a: 4;
+    @while $a > 0 {
+        .col-md-#{$a} { 
+            width: ($a / 12) * 100%;
+            @include col 
+        }
+        .offset-md-#{$a} { 
+            margin-left: ($a / 12) * 100%;
+            @include col 
+        } 
+        $a: $a - 1;
+    }
+    $j: 6;
+    @while $j > 0 {
+        .header-#{$j} {
+            font-size: 2rem - ($j * (1/6));
+        }
+        .subheader-#{$j} {
+            font-size: 1rem - ($j * (1/12));
+        }
+        $j: $j - 1;
+    }
+    @include strokes(2px);
+    @include base-font-size(14px);
+}
+
+.item-container {
+    background-color: $light-gray;
+    border-radius: 1rem;
+    min-height: 4rem;
+    display: flex;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: background-color .3s;
+
+    .text-container {
+        flex-grow: 1;
+        font-size: 1.25rem;
+        font-weight: 400;
+        padding: 1rem 1rem;
+        transition: color .3s;
+    }
+
+    .image-container {
+        height: 4rem;
+        aspect-ratio: 1/1;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        .icon {
+            height: 60%;
+            color: $yellow;
+            transition: color .3s;
+        }
+    }
+
+    &:hover {
+        background-color: $yellow;
+        transition: background-color .3s;
+        .image-container .icon {
+            color: $dark-gray;
+            transition: color .3s;
+        }
+        .text-container {
+            color: $dark-gray;
+            transition: color .3s;
+        }
+    }
+}
+  
+
+.button {
+    &-yellow {
+        background-color: $yellow;
+        border-radius: 0.75rem;
+        padding: 1rem 0;
+        color: $dark-gray;
+        font-weight: 800;
+        font-size: 1rem;
+        outline: 0px solid $yellow;
+        transition: all .3s;
+        &:hover {
+            background-color: rgba(0,0,0,0);
+            color: $yellow;
+            outline: 2px solid $yellow;
+            transition: all .3s;
+        }
+    }
+}
+    
+  
 .row {
     display: flex;
     flex-wrap: wrap;

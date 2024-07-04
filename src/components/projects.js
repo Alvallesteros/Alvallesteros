@@ -16,14 +16,14 @@ function Projects() {
 
     return (       
         <div className='container' style={{marginTop: '0', marginBottom: '0', position: 'relative'}}>
-            <div className='row vcenter'>
+            <div className='row ycenter'>
                 <div className='hspacer-5'></div>
-                <div className={'col-s-3 col-md-2 col-l-2 offset-l-1 col-3 offset-1 ' + ((isTablet | isDesktop) ? null: 'real-center')} style={{padding: '0'}}>
+                <div className={'col-s-3 col-md-2 col-l-2 offset-l-1 col-3 offset-1 ' + ((isTablet | isDesktop) ? null: 'center')} style={{padding: '0'}}>
                     <span className='header-3 title-design '>
                         <span>P</span>rojects
                     </span>
                 </div>
-                <div className='col-s-3 col-md-2 offset-md-2 col-l-2 offset-l-2 col-3 offset-4 button-yellow real-center'>
+                <div className='col-s-3 col-md-2 offset-md-2 col-l-2 offset-l-2 col-3 offset-4 button-yellow center'>
                     Go To Projects
                 </div>
                 <div className='hspacer-5'></div>

@@ -17,15 +17,15 @@ function AboutMe() {
 
     return (
       <div className={'container ' + styles.container}>
-        <div className='row vcenter'>
-            <div className={'col-s-3 col-md-3 col-l-3 col-4 unselectable ' + ((isTablet | isDesktop) ? null: 'real-center' )} style={{paddingTop: isDesktop ? '0r': '2rem', paddingBottom: isDesktop ? '6rem': '0'}}>
-                <span className={'header-3 title-design ' + styles.title}>
+        <div className='row ycenter'>
+            <div className={'col-s-3 col-md-3 col-l-3 col-4 unselectable ' + ((isTablet | isDesktop) ? null: 'center' )} style={{paddingTop: isDesktop ? '0r': '2rem', paddingBottom: isDesktop ? '6rem': '0'}}>
+                <span className={'header-3 title-design pb-4 ' + styles.title}>
                     <span>A</span>bout Me
                     <div className={styles.hline}></div>
                 </span>
             </div>
             { isDesktop ? (
-                <div className='col-s-3 col-md-6 col-l-5 col-8 real-center ' style={{paddingBottom: '3rem', paddingTop: isDesktop ? '3rem' : '0'}}>
+                <div className='col-s-3 col-md-6 col-l-5 col-8 center ' style={{paddingBottom: '3rem', paddingTop: isDesktop ? '3rem' : '0'}}>
                     <span className={'text ' + styles.text}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lorem auctor, malesuada risus eget, laoreet arcu. Mauris id neque in odio mollis scelerisque. Duis iaculis posuere vulputate. Aliquam pulvinar lectus eget dapibus posuere. Nam efficitur, nulla quis molestie laoreet, dolor elit accumsan tortor, ut vulputate lectus purus id turpis. Curabitur eget velit et diam consectetur pharetra. Cras commodo purus ac sem scelerisque imperdiet.
                     </span>
@@ -34,7 +34,7 @@ function AboutMe() {
         </div>
         { isDesktop ? null: (
             <div className='row'>
-                <div className='col-s-3 col-md-6 real-center' style={{paddingBottom: '3rem'}}>
+                <div className='col-s-3 col-md-6 center' style={{paddingBottom: '3rem'}}>
                     <span className={'text ' + styles.text}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lorem auctor, malesuada risus eget, laoreet arcu. Mauris id neque in odio mollis scelerisque. Duis iaculis posuere vulputate. Aliquam pulvinar lectus eget dapibus posuere. Nam efficitur, nulla quis molestie laoreet, dolor elit accumsan tortor, ut vulputate lectus purus id turpis. Curabitur eget velit et diam consectetur pharetra. Cras commodo purus ac sem scelerisque imperdiet.
                     </span>

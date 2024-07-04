@@ -6,7 +6,7 @@ const ExpDate = ({ date, isTablet, isDesktop }) => {
     return (
        <div className='row' style={{position: 'relative'}}>
             <div className='divider' style={{right: (isDesktop | isTablet) ? '0':null}}></div>
-            <div className={'col-s-3 col-md-6 col-l-8 col-12 fill-yellow ' + ((isTablet | isDesktop ? null: 'real-center'))}
+            <div className={'col-s-3 col-md-6 col-l-8 col-12 fill-yellow ' + ((isTablet | isDesktop ? null: 'center'))}
                  style={{paddingLeft: (isTablet | isDesktop) ? "2rem" :null}}>
                 <span className='text-date'>{date}</span>
             </div>
@@ -89,7 +89,7 @@ function Experiences() {
             { isTablet | isDesktop  ? <div className='line'></div> :null }
             <div className='row'>
                 <div className='col-s-3 col-md-6 col-l-8 col-12' style={{paddingLeft: '0', paddingBottom: '0', marginBottom: '-1rem'}}>
-                    <div className='header-4 title-design'>
+                    <div className='header-4 title-design pb-4'>
                         <span>E</span>xperiences
                     </div>
                 </div>

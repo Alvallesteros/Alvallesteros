@@ -35,11 +35,11 @@ function HeroBanner() {
             ) :null }
             <div className='row' style={{position: 'relative'}}>
                 { isTablet | isDesktop  ? null: <div className='line'></div>}
-                <div className='col-6 col-l-4 col-s-3 col-md-3 vcenter unselectable'>
+                <div className='col-6 col-l-4 col-s-3 col-md-3 ycenter unselectable'>
                     <div className={styles.textContainer}>
                         <span className={'header-6 ' + styles.welcome}>What's up? I'm</span>
                         <span className={'header-1 ' + styles.fname}>Angelo</span>
-                        <span className={'header-1 ' + styles.lname}><span>Alva</span>rez</span>
+                        <span className={'header-1 title-design'}><span>Alva</span>rez</span>
                         <span className={'header-6 ' + styles.position}>Junior Developer</span>
                     </div>
                 </div>
@@ -64,13 +64,13 @@ function HeroBanner() {
             { isTablet | isDesktop  ? null: (
                 <div className='row' style={{position: 'relative', pointerEvents: 'auto'}}>
                     <div className='divider'></div>
-                    <div className='col-s-1 real-center'>
+                    <div className='col-s-1 center'>
                         <FontAwesomeIcon icon={faLinkedin} className={styles.socials}/>
                     </div>
-                    <div className='col-s-1 real-center'>
+                    <div className='col-s-1 center'>
                         <FontAwesomeIcon icon={faGithub} className={styles.socials}/>
                     </div>
-                    <div className='col-s-1 real-center'>
+                    <div className='col-s-1 center'>
                         <FontAwesomeIcon icon={faTelegram} className={styles.socials}/>
                     </div>
                     <div className='divider' style={{top:'auto', bottom: '0'}}></div>
