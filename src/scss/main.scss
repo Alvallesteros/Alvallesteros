@@ -65,8 +65,8 @@ $i: 6;
     .mr-#{$i} { margin: 0 ((7 - $i) * 0.5rem) 0 0 !important; }
     .mb-#{$i} { margin: 0 0 ((7 - $i) * 0.5rem) 0 !important; }
     .ml-#{$i} { margin: 0 0 0 ((7 - $i) * 0.5rem) !important; }
-    .fsi-#{$i} { font-size: 1rem + ((7 - $i) * 0.25rem) !important; }
-    .fsd-#{$i} { font-size: 1rem - ((7 - $i) * 0.25rem) !important; }
+    .fsi-#{$i} { font-size: 1rem + ((7 - $i) * 0.15rem) !important; }
+    .fsd-#{$i} { font-size: 1rem - ((7 - $i) * 0.15rem) !important; }
     .lhi-#{$i} { line-height: 1rem + ((7 - $i) * 0.25rem) !important; }
     $i: $i - 1;
 }

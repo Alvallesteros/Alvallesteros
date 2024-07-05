@@ -17,16 +17,17 @@ function Projects() {
     return (       
         <div className='container' style={{marginTop: '0', marginBottom: '0', position: 'relative'}}>
             <div className='row ycenter'>
-                <div className='hspacer-5'></div>
-                <div className={'col-s-3 col-md-2 col-l-2 offset-l-1 col-3 offset-1 ' + ((isTablet | isDesktop) ? null: 'center')} style={{padding: '0'}}>
+                <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 p-4'></div>
+                <div className={'offset-1 col-3 col-lg-4 offset-lg-1 col-md-2 offset-md-1 col-s-4 col-xs-4 ' + ((isTablet | isDesktop) ? null: 'center')} style={{padding: '0'}}>
                     <span className='header-3 title-design '>
                         <span>P</span>rojects
                     </span>
                 </div>
-                <div className='col-s-3 col-md-2 offset-md-2 col-l-2 offset-l-2 col-3 offset-4 button-yellow center'>
+                { isTablet | isDesktop ? null: (<div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 p-6'></div>)}
+                <div className='col-3 offset-5 col-lg-4 offset-lg-2 col-md-2 offset-md-2 col-s-2 offset-s-1 col-xs-4 button-yellow center'>
                     Go To Projects
                 </div>
-                <div className='hspacer-5'></div>
+                <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 p-4'></div>
             </div>
             <div className='background'>
                 <div className='gradient'></div>
