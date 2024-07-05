@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 function Navbar() {
-    const [isDesktop, setDesktop] = useState(window.innerWidth > 992);
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 1023);
 
     const updateMedia = () => {
-        setDesktop(window.innerWidth > 992);
+        setDesktop(window.innerWidth > 1023);
     };
 
     useEffect(() => {
@@ -18,7 +18,7 @@ function Navbar() {
     return (
         <div className={'container navbar-container'}>
             <div className='row ycenter'>
-                <div className='col-1 col-lg-1 col-md-1 col-s-1 center'>
+                <div className='col-1 col-lg-1 col-md-1 col-s-1 col-xs-1 center'>
                     <img src={logo} className='logo'/>
                 </div>
                 { isDesktop ? (
@@ -37,7 +37,7 @@ function Navbar() {
                         </div>
                     </div>
                 ) : (
-                    <div className={'col-md-1 offset-md-6 col-s-1 offset-s-2 justify-end burger-container'}>
+                    <div className={'col-md-1 offset-md-6 col-s-1 offset-s-2 col-xs-1 offset-xs-2 justify-end burger-container'}>
                         <FontAwesomeIcon icon={faBars} className={'hamburger'}/>
                     </div>
                 )}

@@ -190,7 +190,7 @@ $c: 4;
             font-size: 5rem - ($j * (3/6));
         }
         .subheader-#{$j} {
-            font-size: 2rem - ($j * (1/6));
+            font-size: 2.5rem - ($j * (1/6));
         }
         $j: $j - 1;
     }
@@ -255,11 +255,11 @@ $c: 4;
         }
         $j: $j - 1;
     }
-    @include strokes(3px);
+    @include strokes(2px);
     @include base-font-size(16px);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 470px) and (max-width: 767px) {
     .web-container {
         width: 75vw;
         @include webContainer;
@@ -279,10 +279,41 @@ $c: 4;
     $j: 6;
     @while $j > 0 {
         .header-#{$j} {
-            font-size: 2rem - ($j * (1/6));
+            font-size: 2.5rem - ($j * (1/6));
         }
         .subheader-#{$j} {
-            font-size: 1rem - ($j * (1/12));
+            font-size: 1.25rem - ($j * (1/12));
+        }
+        $j: $j - 1;
+    }
+    @include strokes(2px);
+    @include base-font-size(14px);
+}
+
+@media only screen and (max-width: 469px) {
+    .web-container {
+        width: 75vw;
+        @include webContainer;
+    }
+    $a: 4;
+    @while $a > 0 {
+        .col-xs-#{$a} { 
+            width: ($a / 4) * 100%;
+            @include col 
+        }
+        .offset-xs-#{$a} { 
+            margin-left: ($a / 4) * 100%;
+            @include col 
+        } 
+        $a: $a - 1;
+    }
+    $j: 6;
+    @while $j > 0 {
+        .header-#{$j} {
+            font-size: 2.5rem - ($j * (1/6));
+        }
+        .subheader-#{$j} {
+            font-size: 1.25rem - ($j * (1/12));
         }
         $j: $j - 1;
     }
