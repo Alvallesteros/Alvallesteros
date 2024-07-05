@@ -1,14 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../imgs/logo.svg'
-import styles from '../styles/navbar.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { Divide as Hamburger } from 'hamburger-react'
+
+const BurgerMenu = () => {
+    return (
+        <div className='row fill-width fsi-6 burger'>
+            <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 burger-page p-5'>
+                Home
+            </div>
+            <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 burger-page p-5'>
+                Projects
+            </div>
+            <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 burger-page p-5'>
+                About
+            </div>
+        </div>
+    );
+}
+
 
 function Navbar() {
-    const [isDesktop, setDesktop] = useState(window.innerWidth > 992);
+    const [isOpen, setOpen] = useState(false)
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 1023);
 
     const updateMedia = () => {
-        setDesktop(window.innerWidth > 992);
+        setDesktop(window.innerWidth > 1023);
     };
 
     useEffect(() => {
@@ -17,31 +33,35 @@ function Navbar() {
     });
 
     return (
-        <div className={'container ' + styles.navbarContainer}>
-            <div className='row vcenter'>
-                <div className='col-1 col-l-1 col-md-1 col-s-1 real-center'>
-                    <img src={logo} className={styles.logo}/>
+        <div className={'container navbar-container'}>
+            <div className='row ycenter'>
+                <div className='col-1 col-lg-1 col-md-1 col-s-1 col-xs-1 center'>
+                    <img src={logo} className='logo'/>
                 </div>
                 { isDesktop ? (
-                    <div className='row offset-5 col-6 col-l-7 col-md-5 vcenter'>
-                        <div className='col-2 col-l-1 col-md-1 offset-l-2 real-center'>
+                    <div className='row col-6 offset-5 col-lg-9 offset-lg-2 ycenter'>
+                        <div className={'col-2 col-lg-2 center navpage'}>
                             Home
                         </div>
-                        <div className='col-2 col-l-1 col-md-1 real-center'>
+                        <div className={'col-2 col-lg-2 center navpage'}>
                             Projects
                         </div>
-                        <div className='col-2 col-l-1 col-md-1 real-center'>
+                        <div className={'col-2 col-lg-2 center navpage'}>
                             About
                         </div>
-                        <div className={"col-4 col-l-2 col-md-2 offset-2 offset-l-1 offset-md-1 " + styles.searchBar}>
-                            Search...
-                        </div>
+                        {/*<div className={"col-4 offset-2 col-lg-5 offset-lg-1 search-bar"}>
+                            <input type='text' placeholder='Search...'/>
+                        </div>*/}
                     </div>
                 ) : (
-                    <div className={'col-md-1 col-s-1 offset-md-4 offset-s-1 vcenter align-end ' + styles.burgerContainer}>
-                        <FontAwesomeIcon icon={faBars} className={styles.hamburger}/>
+                    <div className={'col-md-1 offset-md-6 col-s-1 offset-s-2 col-xs-1 offset-xs-2 justify-end burger-container'}>
+                        <Hamburger color='#FFD540' toggled={isOpen} toggle={setOpen}/>
                     </div>
                 )}
+            </div>
+            <div className={'row fold-content ' + (isOpen ? 'open': null)}>
+                <BurgerMenu />
+                <div className='p-3'></div>
             </div>
         </div>
     );

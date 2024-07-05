@@ -1,0 +1,54 @@
+.titleCard {
+    background-color: $bg-gray;
+    transition: all .3s;
+    height: 100%;
+    cursor: pointer;
+
+    & * {
+        transition: all .3s;
+    }
+
+    .org {
+        color: white;
+    }
+
+    .icon {
+        height: 2.5rem;
+        color: white;  
+        transition: all .3s;
+        
+        &.up {
+            transform: rotate(180deg);
+            transition: all .3s;
+        }
+    }
+
+    .fold-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s;
+
+        &.open {
+            max-height: 200px;
+            transition: all 1s;
+        }
+    }
+
+    &:hover {
+        background-color: $yellow;
+        transition: all .3s;
+
+        & * {
+            color: $dark-gray;
+            transition: all .3s;
+            border-color: $dark-gray;
+        }
+
+        .org {
+            color: $dark-gray;
+        }
+        
+        
+    }
+
+}
