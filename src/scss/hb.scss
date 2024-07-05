@@ -4,7 +4,7 @@
     margin-bottom: 0;
 }
 
-.textContainer {
+.text-container {
     display: flex;
     align-items: end;
     justify-content: center;
@@ -15,81 +15,55 @@
     pointer-events: none;
 }
 
-
-.welcome {
-    font-family: var(--text-font);
-    color: white;
-    font-weight: 500;
-}
-
-.fname {
-    color: var(--yellow);
-    font-family: var(--design-font);
-    font-weight: 600;
-    font-style: italic;
-}
-
-.lname {
-    color: var(--yellow);
-    font-family: var(--design-font);
-    font-weight: 600;
-}
-
-.lname span {
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke-color: var(--yellow);
-    -webkit-text-stroke-width: var(--stroke);
-}
-
-.profileContainer {
+.profile-container {
     position: relative;
     height: 45vh;
     pointer-events: none;
 }
 
-.imgContainer {
+.img-container {
     overflow-y: hidden;
     position: absolute;
     height: 100%;
     right: 0;
     bottom: 0;
-}
 
-.imgContainer img {
-    height: 100%;
-    width: auto;
-    transform: scaleX(-1);
+    img {
+        height: 100%;
+        width: auto;
+        transform: scaleX(-1);
+    }
 }
 
 .socials {
-    color: var(--yellow);
+    color: $yellow;
     height: 1.5rem;
     z-index: 150;
     cursor: pointer;
     pointer-events: auto;
     transition: height .3s;
+
+    &:hover {
+        height: 1.75rem;
+        transition: height .3s;
+    }
 }
 
-.socials:hover {
-    height: 1.75rem;
-    transition: height .3s;
-}
-
-.socialsDesktop {
-    color: var(--yellow);
+.socials-desktop {
+    color: $yellow;
     height: 2rem;
     z-index: 150;
     pointer-events: auto;
     cursor: pointer;
     transition: all .3s;
+
+    &:hover {
+        height: 2.25rem;
+        transition: all .3s;
+    }
 }
 
-.socialsDesktop:hover {
-    height: 2.25rem;
-    transition: all .3s;
-}
-
-.lineContainer {
+.line-container {
     height: 100%;
     display: flex;
     position: absolute;
@@ -102,7 +76,7 @@
     min-width: 2.75rem;
 }
 
-.contactContainer {
+.contact-container {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -113,33 +87,31 @@
 
 .hbline {
     flex-grow: 1;
-    border-right: var(--stroke) solid var(--yellow);
     height: 100%;
     z-index: 100;
-    margin-right: calc(var(--stroke) * -0.5);
 }
 
 @media only screen and (max-width: 319px) {
-    .textContainer {
+    .text-container {
         line-height: 2.75rem;
         padding-right: 0;
     }
-    .profileContainer {
+    .profile-container {
         height: calc(30vh - 10vw);
     }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 599px){
-    .profileContainer {
+    .profile-container {
         height: calc(25vh + 20vw);
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px){
-    .textContainer {
+    .text-container {
         align-items: start;
     }
-    .profileContainer {
+    .profile-container {
         margin-top: -20vw; 
         min-height: 250px;
     }
@@ -147,11 +119,11 @@
 
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .textContainer {
+    .text-container {
         line-height: 3.5rem;
         padding-right: 0;
     }
-    .profileContainer {
+    .profile-container {
         min-height: 480px;
         max-height: 500px;
         margin-top: -25vw;
@@ -159,11 +131,11 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px){
-    .textContainer {
+    .text-container {
         line-height: 3.5rem;
         padding: 4rem 0;
     }
-    .profileContainer {
+    .profile-container {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -173,11 +145,11 @@
 }
 
 @media only screen and (min-width: 1400px){
-    .textContainer {
+    .text-container {
         line-height: 4.5rem;
         padding-bottom: 5rem;
     }
-    .profileContainer {
+    .profile-container {
         height: 75vh;
     }
 }

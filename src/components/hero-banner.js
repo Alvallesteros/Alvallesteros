@@ -2,7 +2,6 @@ import React, { useEffect, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons"
 import profpic from '../imgs/me-alt.png'
-import styles from '../styles/hero-banner.module.css';
 
 function HeroBanner() {
     const [isTablet, setTablet] = useState(window.innerWidth > 768);
@@ -19,33 +18,33 @@ function HeroBanner() {
     });
 
     return (
-        <div className={'container ' + styles.container}>
+        <div className={'container hb-container'}>
             { isTablet | isDesktop ? ( 
-                <div className={'offset-11 col-1 offset-l-7 col-l-1 offset-md-5 col-md-1'} style={{position: 'absolute', height: '100%', zIndex: '150'}}>
-                    <div className={styles.lineContainer}>
-                        <div className={styles.hbline}></div>
-                        <div className={styles.contactContainer}>
-                            <FontAwesomeIcon icon={faLinkedin} className={styles.socialsDesktop}/>
-                            <FontAwesomeIcon icon={faGithub} className={styles.socialsDesktop}/>
-                            <FontAwesomeIcon icon={faTelegram} className={styles.socialsDesktop}/>
+                <div className={'col-1 offset-11'} style={{position: 'absolute', height: '100%', zIndex: '150'}}>
+                    <div className='line-container'>
+                        <div className='hbline'></div>
+                        <div className='contact-container'>
+                            <FontAwesomeIcon icon={faLinkedin} className='socials-desktop'/>
+                            <FontAwesomeIcon icon={faGithub} className='socials-desktop'/>
+                            <FontAwesomeIcon icon={faTelegram} className='socials-desktop'/>
                         </div>
-                        <div className={styles.hbline}></div>
+                        <div className='hbline'></div>
                     </div>
                 </div>
             ) :null }
             <div className='row' style={{position: 'relative'}}>
                 { isTablet | isDesktop  ? null: <div className='line'></div>}
-                <div className='col-6 col-l-4 col-s-3 col-md-3 ycenter unselectable'>
-                    <div className={styles.textContainer}>
-                        <span className={'header-6 ' + styles.welcome}>What's up? I'm</span>
-                        <span className={'header-1 ' + styles.fname}>Angelo</span>
+                <div className='col-6 ycenter unselectable'>
+                    <div className='text-container'>
+                        <span className={'header-6 text-bold'}>What's up? I'm</span>
+                        <span className={'header-1 title-design text-italic'}>Angelo</span>
                         <span className={'header-1 title-design'}><span>Alva</span>rez</span>
-                        <span className={'header-6 ' + styles.position}>Junior Developer</span>
+                        <span className={'header-6'}>Junior Developer</span>
                     </div>
                 </div>
                 { isDesktop ? (
-                    <div className={'col-6 col-l-4 unselectable ' + styles.profileContainer}>
-                        <div className={styles.imgContainer}>
+                    <div className={'col-6 unselectable profile-container'}>
+                        <div className={'img-container'}>
                             <img src={profpic}/>
                         </div>
                     </div>
@@ -54,24 +53,24 @@ function HeroBanner() {
             { !isDesktop ? (
                 <div className='row' style={{position: 'relative'}}>
                 { isTablet | isDesktop  ? null: <div className='line'></div>}
-                <div className={'offset-l-4 col-l-4 col-s-3 col-md-6 ' + styles.profileContainer}>
-                    <div className={styles.imgContainer}>
+                <div className={'offset-l-4 col-l-4 col-s-3 col-md-6 profile-container'}>
+                    <div className={'img-container'}>
                         <img src={profpic} />
                     </div>
                 </div>
             </div>
             ) :null }
             { isTablet | isDesktop  ? null: (
-                <div className='row' style={{position: 'relative', pointerEvents: 'auto'}}>
+                <div className='row center' style={{position: 'relative', pointerEvents: 'auto'}}>
                     <div className='divider'></div>
                     <div className='col-s-1 center'>
-                        <FontAwesomeIcon icon={faLinkedin} className={styles.socials}/>
+                        <FontAwesomeIcon icon={faLinkedin} className={'socials'}/>
                     </div>
                     <div className='col-s-1 center'>
-                        <FontAwesomeIcon icon={faGithub} className={styles.socials}/>
+                        <FontAwesomeIcon icon={faGithub} className={'socials'}/>
                     </div>
                     <div className='col-s-1 center'>
-                        <FontAwesomeIcon icon={faTelegram} className={styles.socials}/>
+                        <FontAwesomeIcon icon={faTelegram} className={'socials'}/>
                     </div>
                     <div className='divider' style={{top:'auto', bottom: '0'}}></div>
                 </div>

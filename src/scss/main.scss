@@ -97,15 +97,15 @@ $i: 6;
     }
 
     &-bold { font-weight: 700; }
+    &-italic { font-style: italic;}
     &-yellow { color: $yellow; }
-
 }
 
 
 @mixin col {
     float: left;
     padding: 10px; 
-    border: 0px solid red;
+    border: 1px solid red;
     display: flex;
 }
 
@@ -119,18 +119,12 @@ $i: 6;
 }
 
 @mixin strokes($stroke) {
-    .title-design span {
-        -webkit-text-stroke-width: $stroke;
-    }
-    .line {
-        border-left: $stroke solid $yellow;
-    }
-    .divider {
-        border-top: $stroke solid $yellow;
-    }
-    .bullet-line {
-        border-top: $stroke solid $yellow;
-    }
+    .title-design span { -webkit-text-stroke-width: $stroke; }
+    .line { border-left: $stroke solid $yellow; }
+    .divider { border-top: $stroke solid $yellow; }
+    .bullet-line { border-top: $stroke solid $yellow; }
+    .hamburger { border: $stroke solid $light-gray; }
+    .hbline { border-right: $stroke solid $yellow; margin-right: calc($stroke * -0.5); }
 }
 
 @mixin base-font-size($size) {
@@ -175,7 +169,7 @@ $b: 8;
 $c: 4;
 @media only screen and (min-width: 1400px) {
     .web-container {
-        width: 70vw;
+        width: 80vw;
         @include webContainer;
     }
     $a: 12;
@@ -242,11 +236,11 @@ $c: 4;
     $a: 8;
     @while $a > 0 {
         .col-md-#{$a} { 
-            width: ($a / 12) * 100%;
+            width: ($a / 8) * 100%;
             @include col 
         }
         .offset-md-#{$a} { 
-            margin-left: ($a / 12) * 100%;
+            margin-left: ($a / 8) * 100%;
             @include col 
         } 
         $a: $a - 1;
@@ -265,19 +259,19 @@ $c: 4;
     @include base-font-size(16px);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .web-container {
         width: 75vw;
         @include webContainer;
     }
     $a: 4;
     @while $a > 0 {
-        .col-md-#{$a} { 
-            width: ($a / 12) * 100%;
+        .col-s-#{$a} { 
+            width: ($a / 4) * 100%;
             @include col 
         }
-        .offset-md-#{$a} { 
-            margin-left: ($a / 12) * 100%;
+        .offset-s-#{$a} { 
+            margin-left: ($a / 4) * 100%;
             @include col 
         } 
         $a: $a - 1;
@@ -371,3 +365,5 @@ $c: 4;
 }
 
 @import './exp.scss';
+@import './navbar.scss';
+@import './hb.scss';
