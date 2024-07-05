@@ -25,6 +25,8 @@ body {
 
 .container {
     width: 100%;
+    position: relative;
+    margin: 0;
 }
 
 .background {
@@ -63,6 +65,9 @@ $i: 6;
     .mr-#{$i} { margin: 0 ((7 - $i) * 0.5rem) 0 0 !important; }
     .mb-#{$i} { margin: 0 0 ((7 - $i) * 0.5rem) 0 !important; }
     .ml-#{$i} { margin: 0 0 0 ((7 - $i) * 0.5rem) !important; }
+    .fsi-#{$i} { font-size: 1rem + ((7 - $i) * 0.25rem) !important; }
+    .fsd-#{$i} { font-size: 1rem - ((7 - $i) * 0.25rem) !important; }
+    .lhi-#{$i} { line-height: 1rem + ((7 - $i) * 0.25rem) !important; }
     $i: $i - 1;
 }
 
@@ -105,7 +110,7 @@ $i: 6;
 @mixin col {
     float: left;
     padding: 10px; 
-    border: 1px solid red;
+    border: 0px solid red;
     display: flex;
 }
 
@@ -125,10 +130,11 @@ $i: 6;
     .bullet-line { border-top: $stroke solid $yellow; }
     .hamburger { border: $stroke solid $light-gray; }
     .hbline { border-right: $stroke solid $yellow; margin-right: calc($stroke * -0.5); }
+    .hline { border-bottom: $stroke solid $yellow; }
 }
 
 @mixin base-font-size($size) {
-    root: { font-size: $size; }
+    html { font-size: $size; }
 }
 
 .title-design {
@@ -224,7 +230,7 @@ $c: 4;
         }
         $j: $j - 1;
     }
-    @include strokes(3px);
+    @include strokes(2px);
     @include base-font-size(18px);
 }
 
@@ -248,7 +254,7 @@ $c: 4;
     $j: 6;
     @while $j > 0 {
         .header-#{$j} {
-            font-size: 3rem - ($j * (1/6));
+            font-size: 4rem - ($j * (2/6));
         }
         .subheader-#{$j} {
             font-size: 2rem - ($j * (1/6));
@@ -279,14 +285,14 @@ $c: 4;
     $j: 6;
     @while $j > 0 {
         .header-#{$j} {
-            font-size: 2.5rem - ($j * (1/6));
+            font-size: 4rem - ($j * (2/6));
         }
         .subheader-#{$j} {
-            font-size: 1.25rem - ($j * (1/12));
+            font-size: 2rem - ($j * (1/6));
         }
         $j: $j - 1;
     }
-    @include strokes(2px);
+    @include strokes(1px);
     @include base-font-size(14px);
 }
 
@@ -310,21 +316,21 @@ $c: 4;
     $j: 6;
     @while $j > 0 {
         .header-#{$j} {
-            font-size: 2.5rem - ($j * (1/6));
+            font-size: 4rem - ($j * (2/6));
         }
         .subheader-#{$j} {
-            font-size: 1.25rem - ($j * (1/12));
+            font-size: 2rem - ($j * (1/12));
         }
         $j: $j - 1;
     }
-    @include strokes(2px);
-    @include base-font-size(14px);
+    @include strokes(1px);
+    @include base-font-size(12px);
 }
 
 .item-container {
     background-color: $light-gray;
     border-radius: 1rem;
-    min-height: 4rem;
+    min-height: 1rem;
     display: flex;
     padding: 0 1rem;
     cursor: pointer;
@@ -334,8 +340,10 @@ $c: 4;
         flex-grow: 1;
         font-size: 1.25rem;
         font-weight: 400;
+        align-items: start;
         padding: 1rem 1rem;
         transition: color .3s;
+        line-height: normal;
     }
 
     .image-container {
@@ -389,7 +397,14 @@ $c: 4;
     }
 }
     
-  
+.hline {
+    position: absolute;
+    right: -0.25rem;
+    width: 100vw;
+    bottom: 1rem;
+    z-index: 100;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
