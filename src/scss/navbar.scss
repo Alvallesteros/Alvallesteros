@@ -40,17 +40,34 @@
     }
 }
 
-.hamburger {
-    height: 1.75rem;
-    padding: 8px 10px;
-    margin: 0;
-    color: $yellow;
-    border-radius: 10px;
-    font-weight: 300;
-}
-
 .burger-container {
     padding-right: 0;
+}
+
+.burger-page {
+    background-color: $dark-gray;
+    color: white;
+    font-weight: 300;
+    transition: all .3s;
+
+    &:hover {
+        background-color: $yellow;
+        color: $dark-gray;
+        font-weight: 800;
+        transition: all .3s;
+
+    }
+}
+
+.fold-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s;
+
+    &.open {
+        max-height: 200px;
+        transition: all 1s;
+    }
 }
 
 .navpage {

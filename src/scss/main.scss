@@ -88,7 +88,10 @@ $i: 6;
 }
 .fill {
     &-height { height: 100%; }
+    &-width {width: 100%;}
     &-yellow { background-color: $yellow; }
+    &-bg { background-color: $bg-gray;}
+    &-light-gray { background-color: $light-gray; }
 }
 .text {
     font-size: 1rem;

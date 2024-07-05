@@ -26,11 +26,11 @@
     .fold-content {
         max-height: 0;
         overflow: hidden;
-        transition: all 1s ease-out;
+        transition: all 1s;
 
         &.open {
             max-height: 200px;
-            transition: all 0.5s ease-out;
+            transition: all 1s;
         }
     }
 
