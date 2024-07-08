@@ -12,7 +12,7 @@ const BurgerMenu = () => {
                 Projects
             </div>
             <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 burger-page p-5'>
-                About
+                Contact
             </div>
         </div>
     );
@@ -36,7 +36,7 @@ function Navbar() {
         <div className={'container navbar-container'}>
             <div className='row ycenter'>
                 <div className='col-1 col-lg-1 col-md-1 col-s-1 col-xs-1 center'>
-                    <img src={logo} className='logo'/>
+                    <img src={logo} className='logo' alt=''/>
                 </div>
                 { isDesktop ? (
                     <div className='row col-6 offset-5 col-lg-9 offset-lg-2 ycenter'>
@@ -59,10 +59,12 @@ function Navbar() {
                     </div>
                 )}
             </div>
-            <div className={'row fold-content ' + (isOpen ? 'open': null)}>
-                <BurgerMenu />
-                <div className='p-3'></div>
-            </div>
+            { isDesktop ? null: (
+                <div className={'row fold-content ' + (isOpen ? 'open': null)}>
+                    <BurgerMenu />
+                    <div className='p-3'></div>
+                </div>
+            )}
         </div>
     );
 }

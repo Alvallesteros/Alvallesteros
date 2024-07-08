@@ -140,7 +140,7 @@ $i: 6;
     .divider { border-top: $stroke solid $yellow; }
     .bullet-line { border-top: $stroke solid $yellow; }
     .hamburger { border: $stroke solid $light-gray; }
-    .hbline { border-right: $stroke solid $yellow; margin-right: calc($stroke * -0.5); }
+    .hbline { border-right: $stroke solid $yellow; margin-right: calc(#{$stroke} * -0.5); }
     .hline { border-bottom: $stroke solid $yellow; }
 }
 

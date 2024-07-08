@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab, fas } from "@fortawesome/free-brands-svg-icons"
+import { fab } from "@fortawesome/free-brands-svg-icons"
 
 function Skills({ skills }) {
     const [isTablet, setTablet] = useState(window.innerWidth > 767);

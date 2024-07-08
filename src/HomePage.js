@@ -1,5 +1,5 @@
 import homepageYAML from "./data/homepage.yaml"
-import YAML, { parse } from 'yaml';
+import YAML from 'yaml';
 import React, { useState, useEffect } from 'react';
 
 import Navbar from './components/navbar.js';

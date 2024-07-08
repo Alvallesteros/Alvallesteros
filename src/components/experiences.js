@@ -18,15 +18,12 @@ const ExpDate = ({ date, isTablet, isDesktop }) => {
 const Accordion = ({
     organization, position, responsibilities, isTablet, isDesktop
 }) => {
-    const [isHover, setHover] = useState(false);
     const [isOpen, setOpen] = useState(false);
 
     return (
         <div className='row ycenter'>
             <div 
                 className={'row ycenter ' + ('titleCard')}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
                 onClick={() => setOpen(!isOpen)}
             >
                 <div className='p-4 col-12 col-lg-12 col-md-8 col-s-4 col-xs-4'></div>
