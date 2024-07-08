@@ -47,7 +47,7 @@ function Navbar() {
                             Projects
                         </div>
                         <div className={'col-2 col-lg-2 center navpage'}>
-                            About
+                            Contact
                         </div>
                         {/*<div className={"col-4 offset-2 col-lg-5 offset-lg-1 search-bar"}>
                             <input type='text' placeholder='Search...'/>

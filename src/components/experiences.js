@@ -4,7 +4,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 const ExpDate = ({ date, isTablet, isDesktop }) => {
     return (
-       <div className='row' style={{position: 'relative'}}>
+       <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 row' style={{position: 'relative', padding: '0'}}>
             <div className='divider' style={{right: (isDesktop | isTablet) ? '0':null}}></div>
             <div className={'col-s-4 col-xs-4 col-md-4 col-lg-6 col-6 fill-yellow ' + ((isTablet | isDesktop ? null: 'center'))}
                  style={{paddingLeft: (isTablet | isDesktop) ? "2rem" :null}}>
@@ -63,7 +63,7 @@ const Accordion = ({
 }
 
 
-function Experiences() {
+function Experiences({ exp }) {
     const [isTablet, setTablet] = useState(window.innerWidth > 767);
     const [isDesktop, setDesktop] = useState(window.innerWidth > 1023);
 
@@ -94,36 +94,22 @@ function Experiences() {
                     </div>
                 </div>
             </div>
-            <ExpDate 
-                date={'June 2023 - July 2024'}
-                isTablet={isTablet}
-                isDesktop={isDesktop} 
-            />
-            <Accordion 
-                organization={"Computer Society of the Ateneo"}
-                position={"Vice President for Development and Training"}
-                responsibilities={[
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lorem auctor, malesuada risus eget, laoreet arcu. Mauris id neque in odio mollis scelerisque.",
-                    "Curabitur eget velit et diam consectetur pharetra. Cras commodo purus ac sem scelerisque imperdiet."
-                ]}
-                isTablet={isTablet}
-                isDesktop={isDesktop}
-            />
-            <ExpDate 
-                date={'June 2024 - July 2024'}
-                isTablet={isTablet}
-                isDesktop={isDesktop} 
-            />
-            <Accordion 
-                organization={"MSCI Inc."}
-                position={"DevOps Intern"}
-                responsibilities={[
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lorem auctor, malesuada risus eget, laoreet arcu. Mauris id neque in odio mollis scelerisque.",
-                    "Curabitur eget velit et diam consectetur pharetra. Cras commodo purus ac sem scelerisque imperdiet."
-                ]}
-                isTablet={isTablet}
-                isDesktop={isDesktop}
-            />
+            {exp && exp.map((item) => (
+                <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 row' style={{padding: '0'}}>
+                    <ExpDate 
+                        date={item.date}
+                        isTablet={isTablet}
+                        isDesktop={isDesktop} 
+                    />
+                    <Accordion 
+                        organization={item.organization}
+                        position={item.position}
+                        responsibilities={item.responsibilities}
+                        isTablet={isTablet}
+                        isDesktop={isDesktop}
+                    />
+                </div>
+            ))}
         </div>
     );
 }

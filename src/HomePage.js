@@ -15,6 +15,7 @@ function HomePage() {
   const [position, setPosition] = useState();
   const [aboutMe, setAboutMe] = useState();
   const [skills, setSkills] = useState();
+  const [exps, setExp] = useState();
 
     useEffect(() => {
         fetch(homepageYAML)
@@ -25,6 +26,7 @@ function HomePage() {
                 setPosition(parsedText.position);
                 setAboutMe(parsedText.aboutMe);
                 setSkills(parsedText.skills);
+                setExp(parsedText.experience);
             })
     });
 
@@ -38,7 +40,7 @@ function HomePage() {
         />
         <AboutMe about={aboutMe}/>
         <Skills skills={skills}/>
-        <Experiences />
+        <Experiences exp={exps}/>
         <Projects />
         <ContactMe />
       </div>
