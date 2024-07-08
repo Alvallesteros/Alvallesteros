@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons"
 import profpic from '../imgs/me-alt.png'
 
-function HeroBanner() {
+function HeroBanner({ welcome, position }) {
     const [isTablet, setTablet] = useState(window.innerWidth > 767);
     const [isDesktop, setDesktop] = useState(window.innerWidth > 1023);
 
@@ -36,10 +36,10 @@ function HeroBanner() {
                 { isTablet | isDesktop  ? null: <div className='line'></div>}
                 <div className='col-6 col-lg-6 col-md-5 col-s-3 col-xs-4 ycenter unselectable'>
                     <div className='text-container'>
-                        <span className={'subheader-1 text-bold'}>What's up? I'm</span>
+                        <span className={'subheader-1 text-bold'}>{ welcome }</span>
                         <span className={'header-1 title-design text-italic'}>Angelo</span>
                         <span className={'header-1 title-design'}><span>Alva</span>rez</span>
-                        <span className={'subheader-1'}>Junior Developer</span>
+                        <span className={'subheader-1'}>{ position}</span>
                     </div>
                 </div>
                 { isDesktop ? (

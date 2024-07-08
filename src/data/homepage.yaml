@@ -1,0 +1,50 @@
+welcome: What's Up? I'm
+position: 'Junior Developer'
+
+aboutMe: >
+  I am currently a Senior in Ateneo de Manila University, pursuing a degree in <span>Computer Science.</span>
+   I have <span>specializations in Data Science and Analytics</span> and <span>Eneterprise Systems.</span>
+   I would describe myself as an efficient learner and worker.
+   My interests encompass various fields such as: <span>Artificial Intelligence, Data Science, CyberSecurity and the DevOps Software Development LifeCycle.</span>
+
+skills:
+  - name: Python
+    icon: faPython
+  - name: Java
+    icon: faJava
+  - name: Azure
+    icon: faWindows
+  - name: Git Source Control
+    icon: faGitAlt
+  - name: JavaScript
+    icon: faJs
+  - name: HTML / CSS
+    icon: faHtml5
+  - name: UNIX
+    icon: faLinux
+  - name: NodeJS
+    icon: faNode
+
+experience:
+  - organization: MSCI Inc.
+    position: DevOps and Site Reliability Engineering Intern
+    date: June 2024 - August 2024
+    responsibilities:
+      - Created a Azure DevOps End-to-End Deployment Pipeline for 2 features of the company's legacy applications.
+      - Rolled out a database distribution on the company's DMX systems, helping eliminate direct user acces to database third party tools not regulated by the SRE Team.
+  - organization: Computer Society of the Ateneo
+    position: Vice President for Development and Training
+    date: June 2023 - July 2024
+    responsibilities:
+      - Supervised three development workshops with a 12-member core team, avaeraging an attendance of 30 participants per workshop.
+      - Maintained the organization's servers back-end systems, databases, and existing domains using HostMonster web services.
+      - Negotiated terms with four clients looking for web development commissions within and outside the university.
+      - Oversaw a six-member development team in the creation of an event enlistment website built on Django Web Development Framework.
+      - Presided over the improvement of a photoshoot enlistment website using Django REST and ReactJS frameworks.
+  - organization: Google Developer Students Club - Loyola
+    position: Data Scientist
+    date: August 2021 - June 2022
+    responsibilities:
+      - Utilized data analysis to enhance platform functionality and user experience.
+      - Orchestrated the integration of data analytics tools, enabling the tracking of user engagement and facilitating the optimization of website content and features.
+      - Formulated data-driven strategies that can refine user interactions and drive platform growth.
