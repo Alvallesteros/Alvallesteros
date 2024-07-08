@@ -81,6 +81,7 @@ $i: 6;
     .fsi-#{$i} { font-size: 1rem + ((7 - $i) * 0.15rem) !important; }
     .fsd-#{$i} { font-size: 1rem - ((7 - $i) * 0.15rem) !important; }
     .lhi-#{$i} { line-height: 1rem + ((7 - $i) * 0.25rem) !important; }
+    .fw-#{$i} { font-weight: 300 + ($i * 100) !important;}
     $i: $i - 1;
 }
 
@@ -434,3 +435,4 @@ $c: 4;
 @import './exp.scss';
 @import './navbar.scss';
 @import './hb.scss';
+@import './projectspage.scss'

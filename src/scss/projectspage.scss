@@ -1,0 +1,21 @@
+.project-item {
+    
+    span {
+        color: $yellow;
+        transition: color .3s;
+    }
+
+    .desc {
+        color: white;
+        transition: color .3s;
+    }
+    
+
+    &:hover {
+
+        span {
+            color: $dark-gray;
+            transition: color .3s;
+        }
+    }
+}

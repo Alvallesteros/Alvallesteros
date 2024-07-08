@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons"
-import profpic from '../imgs/me-alt.png'
+import profpic from '../../imgs/me-alt.png'
 
 function HeroBanner({ welcome, position }) {
     const [isTablet, setTablet] = useState(window.innerWidth > 767);

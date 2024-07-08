@@ -3,12 +3,12 @@ import YAML from 'yaml';
 import React, { useState, useEffect } from 'react';
 
 import Navbar from '../components/navbar.js';
-import HeroBanner from '../components/hero-banner.js';
-import AboutMe from '../components/about-me.js';
-import Skills from '../components/skills.js';
-import Experiences from '../components/experiences.js';
-import Projects from '../components/projects.js';
-import ContactMe from '../components/contact-me.js';
+import HeroBanner from '../components/home/hero-banner.js';
+import AboutMe from '../components/home/about-me.js';
+import Skills from '../components/home/skills.js';
+import Experiences from '../components/home/experiences.js';
+import Projects from '../components/home/projects.js';
+import ContactMe from '../components/home/contact-me.js';
 
 function HomePage() {
   const [welcome, setWelcome] = useState();
