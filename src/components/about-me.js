@@ -1,6 +1,6 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
-function AboutMe() {
+function AboutMe({ about }) {
     const [isTablet, setTablet] = useState(window.innerWidth > 767);
     const [isDesktop, setDesktop] = useState(window.innerWidth > 1023);
 
@@ -14,6 +14,7 @@ function AboutMe() {
         return () => window.removeEventListener("resize", updateMedia);
     });
 
+
     return (
       <div className='container'>
         <div className='row'>
@@ -25,8 +26,8 @@ function AboutMe() {
                 </span>
             </div>
             <div className='col-lg-7 col-8 col-md-8 col-s-4 col-xs-4'>
-                <span className={'text fsi-6 lhi-4'}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lorem auctor, malesuada risus eget, laoreet arcu. Mauris id neque in odio mollis scelerisque. Duis iaculis posuere vulputate. Aliquam pulvinar lectus eget dapibus posuere. Nam efficitur, nulla quis molestie laoreet, dolor elit accumsan tortor, ut vulputate lectus purus id turpis. Curabitur eget velit et diam consectetur pharetra. Cras commodo purus ac sem scelerisque imperdiet.
+                <span className={'text fsi-6 lhi-4 highlight'}>
+                    <div dangerouslySetInnerHTML={{__html: about }}></div>
                 </span>
             </div>
             <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 p-5'></div>

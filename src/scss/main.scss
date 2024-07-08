@@ -23,6 +23,14 @@ body {
     overflow-x: hidden;
 }
 
+.App {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-gray);
+  }
+
 .container {
     width: 100%;
     position: relative;
@@ -411,6 +419,11 @@ $c: 4;
 .row {
     display: flex;
     flex-wrap: wrap;
+}
+
+.highlight span {
+    color: $yellow;
+    font-weight: 500;
 }
 
 @import './exp.scss';
