@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 function Projects() {
     const [isTablet, setTablet] = useState(window.innerWidth > 767);
@@ -24,9 +25,9 @@ function Projects() {
                     </span>
                 </div>
                 { isTablet | isDesktop ? null: (<div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 p-6'></div>)}
-                <div className='col-3 offset-5 col-lg-4 offset-lg-2 col-md-2 offset-md-2 col-s-2 offset-s-1 col-xs-4 button-yellow center'>
+                <Link to='/projects' className='col-3 offset-5 col-lg-4 offset-lg-2 col-md-2 offset-md-2 col-s-2 offset-s-1 col-xs-4 button-yellow center'>
                     Go To Projects
-                </div>
+                </Link>
                 <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 p-4'></div>
             </div>
             <div className='background'>

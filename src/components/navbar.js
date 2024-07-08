@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../imgs/logo.svg'
 import { Divide as Hamburger } from 'hamburger-react'
+import { Link } from "react-router-dom";
 
 const BurgerMenu = () => {
     return (
         <div className='row fill-width fsi-6 burger'>
-            <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 burger-page p-5'>
+            <Link to='/' className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 burger-page p-5'>
                 Home
-            </div>
-            <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 burger-page p-5'>
+            </Link>
+            <Link to='/projects' className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 burger-page p-5'>
                 Projects
-            </div>
+            </Link>
             <div className='col-12 col-lg-12 col-md-8 col-s-4 col-xs-4 burger-page p-5'>
                 Contact
             </div>
@@ -35,17 +36,17 @@ function Navbar() {
     return (
         <div className={'container navbar-container'}>
             <div className='row ycenter'>
-                <div className='col-1 col-lg-1 col-md-1 col-s-1 col-xs-1 center'>
+                <Link to='/' className='col-1 col-lg-1 col-md-1 col-s-1 col-xs-1 center'>
                     <img src={logo} className='logo' alt=''/>
-                </div>
+                </Link>
                 { isDesktop ? (
                     <div className='row col-6 offset-5 col-lg-9 offset-lg-2 ycenter'>
-                        <div className={'col-2 col-lg-2 center navpage'}>
+                        <Link to='/'className={'col-2 col-lg-2 center navpage'}>
                             Home
-                        </div>
-                        <div className={'col-2 col-lg-2 center navpage'}>
+                        </Link>
+                        <Link to='/projects'className={'col-2 col-lg-2 center navpage'}>
                             Projects
-                        </div>
+                        </Link>
                         <div className={'col-2 col-lg-2 center navpage'}>
                             Contact
                         </div>
