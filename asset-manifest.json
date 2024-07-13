@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./Alvallesteros/static/css/main.b5d61498.css",
-    "main.js": "./Alvallesteros/static/js/main.73656439.js",
-    "static/js/453.2520f4ed.chunk.js": "./Alvallesteros/static/js/453.2520f4ed.chunk.js",
-    "static/media/me-alt.png": "./Alvallesteros/static/media/me-alt.88ed524a72bc4784bdd0.png",
-    "static/media/homepage.yaml": "./Alvallesteros/static/media/homepage.9d8907667ce5f3b1f4a9.yaml",
-    "static/media/logo.svg": "./Alvallesteros/static/media/logo.7e92e2ea9470c1a39a89e030a0c843e2.svg",
-    "index.html": "./Alvallesteros/index.html",
-    "main.b5d61498.css.map": "./Alvallesteros/static/css/main.b5d61498.css.map",
-    "main.73656439.js.map": "./Alvallesteros/static/js/main.73656439.js.map",
-    "453.2520f4ed.chunk.js.map": "./Alvallesteros/static/js/453.2520f4ed.chunk.js.map"
+    "main.css": "/Alvallesteros/static/css/main.b5d61498.css",
+    "main.js": "/Alvallesteros/static/js/main.54282048.js",
+    "static/js/453.2520f4ed.chunk.js": "/Alvallesteros/static/js/453.2520f4ed.chunk.js",
+    "static/media/me-alt.png": "/Alvallesteros/static/media/me-alt.88ed524a72bc4784bdd0.png",
+    "static/media/homepage.yaml": "/Alvallesteros/static/media/homepage.9d8907667ce5f3b1f4a9.yaml",
+    "static/media/logo.svg": "/Alvallesteros/static/media/logo.7e92e2ea9470c1a39a89e030a0c843e2.svg",
+    "index.html": "/Alvallesteros/index.html",
+    "main.b5d61498.css.map": "/Alvallesteros/static/css/main.b5d61498.css.map",
+    "main.54282048.js.map": "/Alvallesteros/static/js/main.54282048.js.map",
+    "453.2520f4ed.chunk.js.map": "/Alvallesteros/static/js/453.2520f4ed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5d61498.css",
-    "static/js/main.73656439.js"
+    "static/js/main.54282048.js"
   ]
 }
