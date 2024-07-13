@@ -44,8 +44,8 @@ function HeroBanner({ welcome, position }) {
                 </div>
                 { isDesktop ? (
                     <div className={'col-6 col-lg-6 unselectable profile-container'}>
-                        <div className={'img-container'}>
-                            <img src={profpic}/>
+                        <div className={'fill-width img-container'} style={{ position: 'absolute', right: '0'}}>
+                            <img src={profpic} style={{ position: 'absolute', right: '0'}}/>
                         </div>
                     </div>
                 ) :null }
@@ -53,7 +53,7 @@ function HeroBanner({ welcome, position }) {
             { !isDesktop ? (
                 <div className='row' style={{position: 'relative'}}>
                 { isTablet | isDesktop  ? null: <div className='line'></div>}
-                <div className={'col-md-5 offset-md-3 col-s-3 offset-s-1 col-xs-4 profile-container'}>
+                <div className={'col-md-4 offset-md-4 col-s-3 offset-s-1 col-xs-4 profile-container'}>
                     <div className={'img-container'}>
                         <img src={profpic} />
                     </div>

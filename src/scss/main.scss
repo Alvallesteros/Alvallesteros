@@ -94,6 +94,15 @@ $i: 6;
     &-end { justify-content: end; }
     &-start { justify-content: start; }
 }
+.absolute {
+    position: absolute;
+    &-right {  right: 0; }
+    &-left { left: 0; }
+    &-top { top: 0; }
+    &-bottom { bottom: 0; }
+    &-y { top: 0; bottom: 0; }
+    &-x { left: 0; right: 0; } 
+}
 .fill {
     &-height { height: 100%; }
     &-width {width: 100%;}
